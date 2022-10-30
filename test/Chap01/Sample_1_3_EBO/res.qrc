@@ -2,8 +2,5 @@
     <qresource prefix="/">
         <file>pic/worker.jpg</file>
         <file>pic/pepsi.png</file>
-        <file>shaders/shapes.frag</file>
-        <file>shaders/shapes.vert</file>
     </qresource>
-    <qresource prefix="/shaders"/>
 </RCC>
