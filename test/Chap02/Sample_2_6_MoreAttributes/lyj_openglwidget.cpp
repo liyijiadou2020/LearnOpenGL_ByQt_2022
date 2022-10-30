@@ -4,12 +4,14 @@
 //声明VBO和VAO，EBO对象
 unsigned int VBO, VAO, EBO;
 
-float vertices[] = {
-    0.5f, 0.5f, 0.0f, // top right
-    0.5f, -0.5f, 0.0f, // bottom right
-    -0.5f, -0.5f, 0.0f, // bottom left
-    -0.5f, 0.5f, 0.0f // top left
-};
+// Chap02 - MoreAttributes
+float vertices[] = { // positions // colors
+                     0.5f, 0.5f, 0.0f, 1.0f, 0.0f, 0.0f,	// top right
+                     0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 0.0f,	// bottom right
+                     -0.5f, -0.5f, 0.0f, 0.0f, 0.0f, 1.0f, 	// bottom left
+                     -0.5f, 0.5f, 0.0f, 0.5f, 0.5f, 0.5f,	// top left
+                   };
+
 
 // EBO - 索引
 unsigned int indices[] = { // note that we start from 0!
@@ -62,9 +64,13 @@ void LYJ_OpenGLWidget::initializeGL()
     //如果data不是NULL，则使用来自此指针的数据初始化数据存储
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
-    //【VAO管理】告知显卡如何解析缓冲里的第0个属性值 & 开启VAO管理的第0个属性值
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+    //【VAO管理】告知显卡如何解析缓冲里的第0个属性值(位置) & 开启VAO管理的第0个属性值
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
+
+    //【VAO管理】告知显卡如何解析缓冲里的第1个属性值(颜色) & 开启VAO管理的第1个属性值
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
+    glEnableVertexAttribArray(1);
 
     // VBO休息
     glBindBuffer(GL_ARRAY_BUFFER, 0);
