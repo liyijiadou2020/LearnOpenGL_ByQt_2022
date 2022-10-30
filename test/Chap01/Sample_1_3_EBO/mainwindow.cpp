@@ -17,3 +17,19 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+
+void MainWindow::on_drawRect_triggered()
+{
+    ui->openGLWidget->drawShape(LYJ_OpenGLWidget::Rect);
+}
+
+
+void MainWindow::on_actClear_triggered()
+{
+    ui->openGLWidget->drawShape(LYJ_OpenGLWidget::None);
+}
+
+void MainWindow::on_actWireframe_triggered()
+{
+    ui->openGLWidget->setWirefame(ui->actWireframe->isChecked());
+}

@@ -83,6 +83,7 @@ QMenuBar{
    </attribute>
    <addaction name="drawRect"/>
    <addaction name="actClear"/>
+   <addaction name="actWireframe"/>
   </widget>
   <action name="drawRect">
    <property name="text">
@@ -92,6 +93,14 @@ QMenuBar{
   <action name="actClear">
    <property name="text">
     <string>清空</string>
+   </property>
+  </action>
+  <action name="actWireframe">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>线框模式</string>
    </property>
   </action>
  </widget>

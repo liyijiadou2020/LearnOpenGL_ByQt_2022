@@ -15,6 +15,13 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_drawRect_triggered();
+
+    void on_actClear_triggered();
+
+    void on_actWireframe_triggered();
+
 private:
     Ui::MainWindow *ui;
 };
