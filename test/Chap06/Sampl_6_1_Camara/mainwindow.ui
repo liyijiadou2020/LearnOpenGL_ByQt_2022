@@ -49,7 +49,7 @@ QWidget:checked{background-color:rgb(150, 150, 150);}
      <x>0</x>
      <y>0</y>
      <width>476</width>
-     <height>23</height>
+     <height>19</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
