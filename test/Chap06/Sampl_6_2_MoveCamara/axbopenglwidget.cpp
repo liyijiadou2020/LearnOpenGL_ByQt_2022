@@ -256,7 +256,7 @@ void AXBOpenGLWidget::keyPressEvent(QKeyEvent *event)
     shaderProgram.setUniformValue("ratio",ratio);
     update();
 }
-// 【摄像机】通过鼠标改变俯仰角、偏航角
+// 【摄像机-顺便追踪】通过鼠标移动改变俯仰角、偏航角
 void AXBOpenGLWidget::mouseMoveEvent(QMouseEvent *event) {
     static float yaw=-90;
     static float pitch=0;
