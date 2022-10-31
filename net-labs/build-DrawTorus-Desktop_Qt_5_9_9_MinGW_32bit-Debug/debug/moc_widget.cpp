@@ -1,16 +1,16 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'foxopenglwidget.h'
+** Meta object code from reading C++ file 'widget.h'
 **
 ** Created by: The Qt Meta Object Compiler version 67 (Qt 5.9.9)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../057_3D_Sphere_Cube_Cone/foxopenglwidget.h"
+#include "../../DrawTorus/widget.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'foxopenglwidget.h' doesn't include <QObject>."
+#error "The header file 'widget.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
 #error "This file was generated using the moc from 5.9.9. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -20,27 +20,27 @@
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
-struct qt_meta_stringdata_FoxOpenGLWidget_t {
+struct qt_meta_stringdata_Widget_t {
     QByteArrayData data[3];
-    char stringdata0[26];
+    char stringdata0[20];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_FoxOpenGLWidget_t, stringdata0) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_Widget_t, stringdata0) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
-static const qt_meta_stringdata_FoxOpenGLWidget_t qt_meta_stringdata_FoxOpenGLWidget = {
+static const qt_meta_stringdata_Widget_t qt_meta_stringdata_Widget = {
     {
-QT_MOC_LITERAL(0, 0, 15), // "FoxOpenGLWidget"
-QT_MOC_LITERAL(1, 16, 8), // "updateGL"
-QT_MOC_LITERAL(2, 25, 0) // ""
+QT_MOC_LITERAL(0, 0, 6), // "Widget"
+QT_MOC_LITERAL(1, 7, 11), // "slotTimeout"
+QT_MOC_LITERAL(2, 19, 0) // ""
 
     },
-    "FoxOpenGLWidget\0updateGL\0"
+    "Widget\0slotTimeout\0"
 };
 #undef QT_MOC_LITERAL
 
-static const uint qt_meta_data_FoxOpenGLWidget[] = {
+static const uint qt_meta_data_Widget[] = {
 
  // content:
        7,       // revision
@@ -54,7 +54,7 @@ static const uint qt_meta_data_FoxOpenGLWidget[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   19,    2, 0x0a /* Public */,
+       1,    0,   19,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -62,41 +62,39 @@ static const uint qt_meta_data_FoxOpenGLWidget[] = {
        0        // eod
 };
 
-void FoxOpenGLWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void Widget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
-        FoxOpenGLWidget *_t = static_cast<FoxOpenGLWidget *>(_o);
+        Widget *_t = static_cast<Widget *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->updateGL(); break;
+        case 0: _t->slotTimeout(); break;
         default: ;
         }
     }
     Q_UNUSED(_a);
 }
 
-const QMetaObject FoxOpenGLWidget::staticMetaObject = {
-    { &QOpenGLWidget::staticMetaObject, qt_meta_stringdata_FoxOpenGLWidget.data,
-      qt_meta_data_FoxOpenGLWidget,  qt_static_metacall, nullptr, nullptr}
+const QMetaObject Widget::staticMetaObject = {
+    { &QOpenGLWidget::staticMetaObject, qt_meta_stringdata_Widget.data,
+      qt_meta_data_Widget,  qt_static_metacall, nullptr, nullptr}
 };
 
 
-const QMetaObject *FoxOpenGLWidget::metaObject() const
+const QMetaObject *Widget::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *FoxOpenGLWidget::qt_metacast(const char *_clname)
+void *Widget::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_FoxOpenGLWidget.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_Widget.stringdata0))
         return static_cast<void*>(this);
-    if (!strcmp(_clname, "QOpenGLFunctions_4_5_Core"))
-        return static_cast< QOpenGLFunctions_4_5_Core*>(this);
     return QOpenGLWidget::qt_metacast(_clname);
 }
 
-int FoxOpenGLWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int Widget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QOpenGLWidget::qt_metacall(_c, _id, _a);
     if (_id < 0)
