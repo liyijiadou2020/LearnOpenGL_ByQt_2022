@@ -7,6 +7,8 @@
 #include <QOpenGLTexture>
 #include <QTimer>
 #include <QTime>
+#include "camera.h"
+
 class AXBOpenGLWidget : public QOpenGLWidget,QOpenGLFunctions_3_3_Core
 {
     Q_OBJECT
@@ -39,16 +41,18 @@ private:
     QOpenGLTexture * textureSmile;
     QOpenGLTexture * textureSmall;
     QTimer timer;
+    QTime m_time;
+    Camera m_camera;
 
     // 摄像机
-    QTime m_time;
-    QVector3D cameraPos;
-    QVector3D cameraTarget;
-    QVector3D cameraDirection;
-    QVector3D up;
-    QVector3D cameraUp;
-    QVector3D cameraRight;
-    QVector3D cameraFront;
+
+//    QVector3D cameraPos;
+//    QVector3D cameraTarget;
+//    QVector3D cameraDirection;
+//    QVector3D up;
+//    QVector3D cameraUp;
+//    QVector3D cameraRight;
+//    QVector3D cameraFront;
 
 };
 

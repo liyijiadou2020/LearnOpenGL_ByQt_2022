@@ -64,10 +64,8 @@ unsigned int indices[] = { // note that we start from 0!
                            1, 2, 3 // second triangle
                          };
 float ratio=0.5;
-
-float PI=3.1415926;
 QPoint deltaPos;
-float fov=45.0;
+
 AXBOpenGLWidget::AXBOpenGLWidget(QWidget *parent) : QOpenGLWidget(parent)
 {
     setFocusPolicy(Qt::StrongFocus);
@@ -76,19 +74,7 @@ AXBOpenGLWidget::AXBOpenGLWidget(QWidget *parent) : QOpenGLWidget(parent)
     timer.start(TIMEOUTMSEC);
     m_time.start();
 
-    //Camera position
-    cameraPos = QVector3D(0.0f, 0.0f, 2.0f);
-    //Camera direction
-    cameraTarget = QVector3D(0.0f, 0.0f, 0.0f);
-    cameraDirection = QVector3D(cameraPos - cameraTarget);
-    cameraDirection.normalize();
-    //Right axis
-    up = QVector3D(0.0f, 1.0f, 0.0f);
-    cameraRight = QVector3D::crossProduct(up, cameraDirection);
-    cameraRight.normalize();
-    //Up axis
-    cameraUp = QVector3D::crossProduct(cameraDirection, cameraRight);
-    cameraFront=QVector3D(0.0, 0.0, -1.0);
+    m_camera.Position=QVector3D(0, 0, 3);
 
 }
 
@@ -192,9 +178,9 @@ void AXBOpenGLWidget::paintGL()
 
     float time=m_time.elapsed()/1000.0;
     QMatrix4x4 projection;
-    projection.perspective(fov,(float)width()/height(),0.1,100);
+    projection.perspective(m_camera.Zoom,(float)width()/height(),0.1,100);
 
-    view.lookAt(cameraPos, cameraPos+cameraFront,up);
+    view.lookAt(m_camera.Position, m_camera.Position+m_camera.Front, m_camera.Up);
 
     glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
     glEnable(GL_DEPTH_TEST);
@@ -230,14 +216,16 @@ void AXBOpenGLWidget::paintGL()
 #include <QKeyEvent>
 void AXBOpenGLWidget::keyPressEvent(QKeyEvent *event)
 {
-    float cameraSpeed=2.5*TIMEOUTMSEC/1000.0;
+    float deltaTime=TIMEOUTMSEC/1000.0;
+
     switch (event->key()) {
     case Qt::Key_Up:ratio+=0.1;break;
     case Qt::Key_Down:ratio-=0.1;break;
-    case Qt::Key_W: cameraPos += cameraSpeed * cameraFront;break;
-    case Qt::Key_S: cameraPos -= cameraSpeed * cameraFront;break;
-    case Qt::Key_D: cameraPos += cameraSpeed * cameraRight;break;
-    case Qt::Key_A: cameraPos -= cameraSpeed * cameraRight;break;
+    case Qt::Key_W: m_camera.ProcessKeyboard(FORWARD,deltaTime);break;
+    case Qt::Key_S: m_camera.ProcessKeyboard(BACKWARD,deltaTime);break;
+    case Qt::Key_D: m_camera.ProcessKeyboard(RIGHT,deltaTime);break;
+    case Qt::Key_A: m_camera.ProcessKeyboard(LEFT,deltaTime);break;
+
     default:
         break;
     }
@@ -251,32 +239,18 @@ void AXBOpenGLWidget::keyPressEvent(QKeyEvent *event)
 
 void AXBOpenGLWidget::mouseMoveEvent(QMouseEvent *event)
 {
-    static float yaw=-90;
-    static float pitch=0;
     static QPoint lastPos(width()/2,height()/2);
     auto currentPos=event->pos();
     deltaPos=currentPos-lastPos;
     lastPos=currentPos;
-    float sensitivity = 0.1f; // change this value to your liking
-    deltaPos *= sensitivity;
-    yaw += deltaPos.x();
-    pitch -= deltaPos.y();// reversed since y-coordinates go from bottom to top
-    //qDebug()<<deltaPos.x()<<","<<deltaPos.y();
-    if(pitch > 89.0f) pitch = 89.0f;
-    if(pitch < -89.0f) pitch = -89.0f;
-    cameraFront.setX(cos(yaw*PI/180) * cos(pitch*PI/180));
-    cameraFront.setY(sin(pitch*PI/180));
-    cameraFront.setZ(sin(yaw*PI/180) * cos(pitch*PI/180));
-    cameraFront.normalize();
+
+    m_camera.ProcessMouseMovement(deltaPos.x(),-deltaPos.y());
     update();
 }
 
 void AXBOpenGLWidget::wheelEvent(QWheelEvent *event)
 {
-    if(fov >= 1.0f && fov <= 75.0f)
-        fov -= event->angleDelta().y()/120;//一步是120
-    if(fov <= 1.0f) fov = 1.0f;
-    if(fov >= 75.0f) fov = 75.0f;
+    m_camera.ProcessMouseScroll(event->angleDelta().y()/120);
     update();
 }
 
