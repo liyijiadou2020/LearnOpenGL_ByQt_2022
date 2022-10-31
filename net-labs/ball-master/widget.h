@@ -20,7 +20,7 @@ protected:
 private:
     BallShader m_shader; //球渲染器
     QMatrix4x4 m_pMatrix,m_modelMatrix; //投影矩阵、基本转换矩阵
-    QVector3D m_eye,m_target; //视点,和目标
+    QVector3D m_eye, m_target; //视点,和目标
 };
 
 #endif // WIDGET_H

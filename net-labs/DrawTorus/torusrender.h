@@ -19,7 +19,10 @@ public:
 private:
     QOpenGLShaderProgram program_;
     QOpenGLBuffer vbo_;
-    QVector<GLfloat> vertPoints_,textPoints_;
+    QVector<GLfloat> vertPoints_;
+
+    // #TODO 纹理，尝试丢弃
+    QVector<GLfloat> textPoints_;
     QOpenGLTexture *texture_{nullptr};
     bool userTexture_ = false;
 };

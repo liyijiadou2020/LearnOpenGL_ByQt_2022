@@ -14,7 +14,7 @@
    <string>LIYIJIA‘s Window!</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="res.qrc">
+   <iconset>
     <normaloff>:/pic/pepsi.png</normaloff>:/pic/pepsi.png</iconset>
   </property>
   <property name="styleSheet">
@@ -158,7 +158,7 @@ QMenuBar{
   </action>
   <action name="actionmove">
    <property name="text">
-    <string>move</string>
+    <string>Move:</string>
    </property>
    <property name="toolTip">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MOVE&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -204,8 +204,6 @@ QMenuBar{
    <header location="global">lyj_openglwidget.h</header>
   </customwidget>
  </customwidgets>
- <resources>
-  <include location="res.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

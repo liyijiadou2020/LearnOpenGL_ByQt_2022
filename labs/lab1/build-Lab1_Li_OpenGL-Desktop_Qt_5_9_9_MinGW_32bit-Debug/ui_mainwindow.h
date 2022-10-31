@@ -154,13 +154,13 @@ public:
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "LIYIJIA\342\200\230s Window!", Q_NULLPTR));
         drawRect->setText(QApplication::translate("MainWindow", "\347\224\273\344\270\200\344\270\252\347\237\251\345\275\242", Q_NULLPTR));
-        actClear->setText(QApplication::translate("MainWindow", "\346\270\205\347\251\272", Q_NULLPTR));
-        actWireframe->setText(QApplication::translate("MainWindow", "\347\272\277\346\241\206\346\250\241\345\274\217", Q_NULLPTR));
+        actClear->setText(QApplication::translate("MainWindow", "Clear", Q_NULLPTR));
+        actWireframe->setText(QApplication::translate("MainWindow", "Wireframe", Q_NULLPTR));
         actionBall->setText(QApplication::translate("MainWindow", "Ball", Q_NULLPTR));
         actionCone->setText(QApplication::translate("MainWindow", "Cone", Q_NULLPTR));
         actionCube->setText(QApplication::translate("MainWindow", "Cube", Q_NULLPTR));
         actionTorus->setText(QApplication::translate("MainWindow", "Torus", Q_NULLPTR));
-        actionmove->setText(QApplication::translate("MainWindow", "move", Q_NULLPTR));
+        actionmove->setText(QApplication::translate("MainWindow", "Move:", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
         actionmove->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>MOVE</p></body></html>", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP

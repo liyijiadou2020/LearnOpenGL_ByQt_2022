@@ -1,6 +1,9 @@
 #include "widget.h"
 #include <QWheelEvent>
+#include <QMainWindow>
 
+
+// 初始视点和目标位置
 Widget::Widget(QWidget *parent)
     : QOpenGLWidget(parent),
       m_eye(0,0,1), //初始视点位置
@@ -17,11 +20,11 @@ Widget::~Widget()
 void Widget::initializeGL()
 {
     m_shader.initialize(0.8); //初始化半径为0.8的球体数据
+
 }
 
 void Widget::paintGL()
 {        
-
     QOpenGLExtraFunctions *f = QOpenGLContext::currentContext()->extraFunctions();
     f->glClearColor(0.0, 0.0, 0.0, 0.0);
     f->glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);

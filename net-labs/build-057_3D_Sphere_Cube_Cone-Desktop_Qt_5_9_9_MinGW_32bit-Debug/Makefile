@@ -210,6 +210,7 @@ Makefile: ../057_3D_Sphere_Cube_Cone/057_3D_Sphere_Cube_Cone.pro E:/Qt/Qt5.9.9/5
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/qt_config.prf \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/win32-g++/qmake.conf \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/exclusive_builds.prf \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/toolchain.prf \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/default_pre.prf \
@@ -387,6 +388,7 @@ E:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/qt_functions.prf:
 E:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/qt_config.prf:
 E:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/win32-g++/qmake.conf:
 E:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/spec_post.prf:
+.qmake.stash:
 E:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/exclusive_builds.prf:
 E:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/toolchain.prf:
 E:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/features/default_pre.prf:

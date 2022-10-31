@@ -1,9 +1,12 @@
 #include "ballshader.h"
 
+// 1. 编译，链接着色器
+// 2. 生成球面顶点，放入m_points
+// 3. 将m_points中的点传入vbo
 void BallShader::initialize(float r)
 {
-    m_program.addCacheableShaderFromSourceFile(QOpenGLShader::Vertex,"vsrc.vsh");
-    m_program.addCacheableShaderFromSourceFile(QOpenGLShader::Fragment,"fsrc.fsh");
+    m_program.addCacheableShaderFromSourceFile(QOpenGLShader::Vertex,"shapes.vert");
+    m_program.addCacheableShaderFromSourceFile(QOpenGLShader::Fragment,"shapes.frag");
     m_program.link();
 
     m_r = r;
@@ -35,6 +38,8 @@ void BallShader::initialize(float r)
     m_vbo.bind();
     m_vbo.allocate(m_points.constData(),m_points.count() * sizeof (GLfloat));
 }
+
+// #TODO: 这个f是拿来干嘛的？
 
 void BallShader::render(QOpenGLExtraFunctions *f, QMatrix4x4 &projM, QMatrix4x4 &camera, QMatrix4x4 &model)
 {

@@ -19,6 +19,7 @@ private:
     QOpenGLShaderProgram m_program;
     QOpenGLBuffer m_vbo;
     QVector<GLfloat> m_points;
+
     float m_r;
 };
 
