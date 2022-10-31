@@ -1,0 +1,12 @@
+INPUT(
+./release\main.o
+./release\mainwindow.o
+./release\foxopenglwidget.o
+./release\camera.o
+./release\sphere.o
+./release\cube.o
+./release\cone.o
+./release\qrc_resource.o
+./release\moc_mainwindow.o
+./release\moc_foxopenglwidget.o
+);
