@@ -45,7 +45,7 @@ void Widget::resizeGL(int w, int h)
 
 void Widget::paintGL()
 {
-    // #TODO 这个f是用来干啥的？？？
+    // 设置底色
     QOpenGLExtraFunctions *f = QOpenGLContext::currentContext()->extraFunctions();
     f->glClearColor(0.2f,0.3f,0.3f,1.0f);
     f->glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -60,7 +60,7 @@ void Widget::paintGL()
     mMatrix.rotate(angleY_,0,1,0);
     mMatrix.rotate(angleZ_,0,0,1);
 
-    render_.render(f,pMatrix_,vMatrix,mMatrix);
+    render_.render(f,pMatrix_, vMatrix, mMatrix);
 }
 
 // X角+5， Y角+5， Z角+5

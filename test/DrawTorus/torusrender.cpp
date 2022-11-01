@@ -93,7 +93,7 @@ void TorusRender::render(QOpenGLExtraFunctions *f, QMatrix4x4 &pMatrix, QMatrix4
 {
     f->glEnable(GL_DEPTH_TEST); //开启深度测试
     // 如果启用，根据它们在窗口坐标中的缠绕来剔除多边形。看不出有什么用
-//    f->glEnable(GL_CULL_FACE);
+    f->glEnable(GL_CULL_FACE);
     program_.bind();
     vbo_.bind();
 
@@ -101,8 +101,8 @@ void TorusRender::render(QOpenGLExtraFunctions *f, QMatrix4x4 &pMatrix, QMatrix4
     program_.setUniformValue("uVMatrix",vMatrix);
     program_.setUniformValue("uMMatrix",mMatrix);
 
-    program_.enableAttributeArray(0);
-    program_.enableAttributeArray(1);
+    program_.enableAttributeArray(0); //坐标
+    program_.enableAttributeArray(1); //颜色
     program_.setAttributeBuffer(0,GL_FLOAT,0,3,3*sizeof(GLfloat));
     program_.setAttributeBuffer(1,GL_FLOAT,vertPoints_.count() * sizeof(GLfloat),4,4*sizeof(GLfloat));
 
