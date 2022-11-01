@@ -354,6 +354,7 @@ release/moc_myopenglwidget.cpp: E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qgenericmatrix.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/QOpenGLBuffer \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qopenglbuffer.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/QVector3D \
 		../1101_01_DrawCube/myopenglwidget.h \
 		release/moc_predefs.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/bin/moc.exe
@@ -597,7 +598,73 @@ release/mainwindow.o: ../1101_01_DrawCube/mainwindow.cpp ../1101_01_DrawCube/mai
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qtouchdevice.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qtabwidget.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qicon.h \
-		ui_mainwindow.h
+		ui_mainwindow.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/QVariant \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QAction \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qaction.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qactiongroup.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QApplication \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qapplication.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qcoreapplication.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qeventloop.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qdesktopwidget.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qguiapplication.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qinputmethod.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QButtonGroup \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qbuttongroup.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QHeaderView \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qheaderview.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qabstractitemview.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qabstractscrollarea.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qframe.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qabstractitemmodel.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qitemselectionmodel.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qabstractitemdelegate.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qstyleoption.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qabstractspinbox.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qvalidator.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qregularexpression.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qslider.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qabstractslider.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qstyle.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qtabbar.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qrubberband.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QMenuBar \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qmenubar.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qmenu.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QStatusBar \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qstatusbar.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QWidget \
+		../1101_01_DrawCube/myopenglwidget.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QOpenGLWidget \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qopenglwidget.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/QSurfaceFormat \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qsurfaceformat.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qopengl.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qt_windows.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtANGLE/GLES3/gl3.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtANGLE/GLES3/gl3platform.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtANGLE/KHR/khrplatform.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtANGLE/GLES2/gl2.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtANGLE/GLES2/gl2platform.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qopengles2ext.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qopenglext.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qopenglfunctions_4_3_core.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/QOpenGLVersionFunctions \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qopenglversionfunctions.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qopenglcontext.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/QObject \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/QScopedPointer \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/QOpenGLShaderProgram \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qopenglshaderprogram.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qvector3d.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qvector4d.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qmatrix4x4.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qquaternion.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qgenericmatrix.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/QOpenGLBuffer \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qopenglbuffer.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/QVector3D
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\mainwindow.o ..\1101_01_DrawCube\mainwindow.cpp
 
 release/myopenglwidget.o: ../1101_01_DrawCube/myopenglwidget.cpp ../1101_01_DrawCube/myopenglwidget.h \
@@ -728,7 +795,8 @@ release/myopenglwidget.o: ../1101_01_DrawCube/myopenglwidget.cpp ../1101_01_Draw
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qquaternion.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qgenericmatrix.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/QOpenGLBuffer \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qopenglbuffer.h
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qopenglbuffer.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/QVector3D
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\myopenglwidget.o ..\1101_01_DrawCube\myopenglwidget.cpp
 
 release/qrc_res.o: release/qrc_res.cpp 
