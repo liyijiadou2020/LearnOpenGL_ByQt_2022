@@ -1,6 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file>shapes.frag</file>
-        <file>shapes.vert</file>
-    </qresource>
-</RCC>
