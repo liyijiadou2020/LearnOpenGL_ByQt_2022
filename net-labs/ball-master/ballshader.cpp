@@ -54,6 +54,7 @@ void BallShader::render(QOpenGLExtraFunctions *f, QMatrix4x4 &projM, QMatrix4x4 
     m_program.enableAttributeArray(0);
 
     m_program.setAttributeBuffer(0,GL_FLOAT,0,3,0);
+
     f->glDrawArrays(GL_TRIANGLES,0,m_points.count() / 3);
 
     m_program.disableAttributeArray(0);

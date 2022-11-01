@@ -17,7 +17,7 @@ CXXFLAGS      = -fno-keep-inline-dllexport -g -std=gnu++11 -Wall -W -Wextra -fex
 INCPATH       = -I..\ball-master -I. -IE:\Qt\Qt5.9.9\5.9.9\mingw53_32\include -IE:\Qt\Qt5.9.9\5.9.9\mingw53_32\include\QtWidgets -IE:\Qt\Qt5.9.9\5.9.9\mingw53_32\include\QtGui -IE:\Qt\Qt5.9.9\5.9.9\mingw53_32\include\QtANGLE -IE:\Qt\Qt5.9.9\5.9.9\mingw53_32\include\QtCore -Idebug -IE:\Qt\Qt5.9.9\5.9.9\mingw53_32\mkspecs\win32-g++ 
 LINKER      =        g++
 LFLAGS        =        -Wl,-subsystem,windows -mthreads
-LIBS        =        -lmingw32 -LE:\Qt\Qt5.9.9\5.9.9\mingw53_32\lib E:\Qt\Qt5.9.9\5.9.9\mingw53_32\lib\libqtmaind.a -LC:\openssl\lib -LC:\Utils\my_sql\my_sql\lib -LC:\Utils\postgresql\pgsql\lib -lshell32 E:\Qt\Qt5.9.9\5.9.9\mingw53_32\lib\libQt5Widgetsd.a E:\Qt\Qt5.9.9\5.9.9\mingw53_32\lib\libQt5Guid.a E:\Qt\Qt5.9.9\5.9.9\mingw53_32\lib\libQt5Cored.a 
+LIBS        =        -lmingw32 -LE:\Qt\Qt5.9.9\5.9.9\mingw53_32\lib E:\Qt\Qt5.9.9\5.9.9\mingw53_32\lib\libqtmaind.a -LC:\openssl\lib -LC:\Utils\my_sql\my_sql\lib -LC:\Utils\postgresql\pgsql\lib -lshell32 -lopengl32 E:\Qt\Qt5.9.9\5.9.9\mingw53_32\lib\libQt5Widgetsd.a E:\Qt\Qt5.9.9\5.9.9\mingw53_32\lib\libQt5Guid.a E:\Qt\Qt5.9.9\5.9.9\mingw53_32\lib\libQt5Cored.a 
 QMAKE         = E:\Qt\Qt5.9.9\5.9.9\mingw53_32\bin\qmake.exe
 IDC           = idc
 IDL           = midl
@@ -221,6 +221,11 @@ debug/moc_widget.cpp: E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QOpenGLWi
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtANGLE/GLES2/gl2platform.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qopengles2ext.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qopenglext.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/QWheelEvent \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QMainWindow \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qmainwindow.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qtabwidget.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qicon.h \
 		../ball-master/ballshader.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/QOpenGLExtraFunctions \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qopenglextrafunctions.h \
@@ -373,6 +378,11 @@ debug/main.o: ../ball-master/main.cpp ../ball-master/widget.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtANGLE/GLES2/gl2platform.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qopengles2ext.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qopenglext.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/QWheelEvent \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QMainWindow \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qmainwindow.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qtabwidget.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qicon.h \
 		../ball-master/ballshader.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/QOpenGLExtraFunctions \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qopenglextrafunctions.h \
@@ -513,6 +523,11 @@ debug/widget.o: ../ball-master/widget.cpp ../ball-master/widget.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtANGLE/GLES2/gl2platform.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qopengles2ext.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qopenglext.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/QWheelEvent \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QMainWindow \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qmainwindow.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qtabwidget.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qicon.h \
 		../ball-master/ballshader.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/QOpenGLExtraFunctions \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qopenglextrafunctions.h \
@@ -529,8 +544,7 @@ debug/widget.o: ../ball-master/widget.cpp ../ball-master/widget.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qquaternion.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qgenericmatrix.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/QOpenGLBuffer \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qopenglbuffer.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/QWheelEvent
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qopenglbuffer.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\widget.o ..\ball-master\widget.cpp
 
 debug/ballshader.o: ../ball-master/ballshader.cpp ../ball-master/ballshader.h \

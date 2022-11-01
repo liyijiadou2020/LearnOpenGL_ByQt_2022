@@ -2,6 +2,9 @@
 #define WIDGET_H
 
 #include <QOpenGLWidget>
+#include <QWheelEvent>
+#include <QMainWindow>
+
 #include "ballshader.h"
 class Widget : public QOpenGLWidget
 {

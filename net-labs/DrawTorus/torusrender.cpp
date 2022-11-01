@@ -5,8 +5,8 @@
 void TorusRender::initsize(float rBig, float rSmall, int nCol, int nRow, QImage &img)
 {
     userTexture_ = true;
-    program_.addCacheableShaderFromSourceFile(QOpenGLShader::Vertex,":/shape.vert");
-    program_.addCacheableShaderFromSourceFile(QOpenGLShader::Fragment,":/shape.frag");
+    program_.addCacheableShaderFromSourceFile(QOpenGLShader::Vertex,"vsrc.vert");
+    program_.addCacheableShaderFromSourceFile(QOpenGLShader::Fragment,"fsrc.frag");
     program_.link();
 
     float angdegColSpan = 360.0/nCol;
