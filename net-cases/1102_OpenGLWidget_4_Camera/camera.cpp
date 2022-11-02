@@ -50,7 +50,12 @@ void Camera::move(float x, float y, float z)
     m_pos += _right * y;
     m_pos += m_up * z;
 }
-
+/*
+ * WASD：移动方向
+ * 鼠标：移动视角
+ * Esc：窗口不再追踪鼠标
+ *
+ */
 bool Camera::eventFilter(QObject *obj, QEvent *ev)
 {
     auto _widget = qobject_cast<QOpenGLWidget *>(obj);

@@ -20,7 +20,8 @@ public:
     void update(); // 计算最终的运动距离和最终的视图矩阵
     QMatrix4x4 view() { return m_view; }
 protected:
-    // eventFilter表示本类可以用于监控在其它类中发生的事件。
+    // eventFilter表示本类可以用于监控在其它类中发生的事件
+    // 这里用来监控窗口类中的鼠标和键盘事件
     bool eventFilter(QObject *obj, QEvent *ev) override;
 private:
     QMatrix4x4 m_view;
