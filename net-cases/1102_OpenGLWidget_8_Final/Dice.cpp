@@ -42,8 +42,12 @@ Dice::Dice()
 	_texture->setMagnificationFilter(QOpenGLTexture::Linear);
 	setTexture(_texture);
 
-    // #TODO ÓÃ²»ÁË£¡
-//    setMaterial({0, 1, 0.2, 16});
+    Material m;
+    m.ambient=0;
+    m.diffuse=1;
+    m.specular=0.2;
+    m.shininess=16;
+    setMaterial(m);
 
 	auto _program = new QOpenGLShaderProgram();
     _program->addShaderFromSourceFile(QOpenGLShader::Vertex, ":shader/vertex.shader");

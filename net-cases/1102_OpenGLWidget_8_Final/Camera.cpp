@@ -93,7 +93,7 @@ bool Camera::eventFilter(QObject *obj, QEvent *ev)
 	if (_widget)
 	{
 		if (ev->type() == QEvent::KeyPress)
-		{
+        { //监视键盘
 			auto event = static_cast<QKeyEvent *>(ev);
 			if (event->key() == Qt::Key_Escape)
 			{
@@ -154,7 +154,9 @@ bool Camera::eventFilter(QObject *obj, QEvent *ev)
 			}
 		}
 		else if (ev->type() == QEvent::MouseButtonPress)
-		{
+        { //监视鼠标
+            _widget->setFocus();
+
 			auto _lastPos = _widget->mapToGlobal(_widget->rect().center());
 			QCursor::setPos(_lastPos);
 

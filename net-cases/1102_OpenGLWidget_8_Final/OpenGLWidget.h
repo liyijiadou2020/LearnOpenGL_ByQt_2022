@@ -30,4 +30,8 @@ private:
     // 用来绘制十字架
     void _generateCenterCross(QPainter&);
 
+public:
+
+
+
 };

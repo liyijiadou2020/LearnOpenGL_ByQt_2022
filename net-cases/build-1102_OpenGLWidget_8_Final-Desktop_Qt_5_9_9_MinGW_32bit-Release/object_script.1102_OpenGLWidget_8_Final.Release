@@ -6,8 +6,10 @@ INPUT(
 ./release\Model.o
 ./release\OpenGLWidget.o
 ./release\main.o
+./release\mainwindow.o
 ./release\qrc_res.o
 ./release\moc_Camera.o
 ./release\moc_Light.o
 ./release\moc_OpenGLWidget.o
+./release\moc_mainwindow.o
 );

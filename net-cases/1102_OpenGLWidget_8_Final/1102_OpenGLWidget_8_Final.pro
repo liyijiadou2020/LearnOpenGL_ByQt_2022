@@ -24,7 +24,8 @@ SOURCES += \
     LightModel.cpp \
     Model.cpp \
     OpenGLWidget.cpp \
-    main.cpp
+    main.cpp \
+    mainwindow.cpp
 
 HEADERS += \
     Camera.h \
@@ -32,7 +33,8 @@ HEADERS += \
     Light.h \
     LightModel.h \
     OpenGLWidget.h \
-    Model.h
+    Model.h \
+    mainwindow.h
 
 FORMS += \
     mainwindow.ui
