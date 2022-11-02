@@ -42,6 +42,7 @@ Dice::Dice()
 	_texture->setMagnificationFilter(QOpenGLTexture::Linear);
 	setTexture(_texture);
 
+    // #TODO 用不了！
 //    setMaterial({0, 1, 0.2, 16});
 
 	auto _program = new QOpenGLShaderProgram();
@@ -57,17 +58,13 @@ Dice::~Dice()
 void Dice::init()
 {
 	initializeOpenGLFunctions();
-	if (!m_vao.isCreated())
-		m_vao.create();
-	if (!m_vbo.isCreated())
-		m_vbo.create();
-	if (!m_program->isLinked())
-		m_program->link();
+    if (!m_vao.isCreated()) m_vao.create();
+    if (!m_vbo.isCreated()) m_vbo.create();
+    if (!m_program->isLinked()) m_program->link();
 
 	if (m_vertexCount < m_vertices.count())
 	{
-		if (m_vertexBuffer)
-			delete[] m_vertexBuffer;
+        if (m_vertexBuffer) delete[] m_vertexBuffer;
 		m_vertexBuffer = new float[m_vertices.count() * VertexFloatCount];
 		m_vertexCount = m_vertices.count();
 		int _offset = 0;
@@ -107,15 +104,18 @@ void Dice::init()
 void Dice::update()
 {
 }
-
+// 绘制的时候，我们需要额外的传入视角信息，光源的信息和材质的信息
+// 这里有一个m_projection变量和m_camera对象以及m_light对象。它们都是通过外部传递进来的。
 void Dice::paint()
 {
-	for (auto index : m_textures.keys())
+    // 开启纹理
+    for (auto index : m_textures.keys())
 	{
 		m_textures[index]->bind(index);
 	}
 	m_vao.bind();
 	m_program->bind();
+
 	// 绑定变换矩阵
 	m_program->setUniformValue("projection", m_projection);
 	m_program->setUniformValue("view", m_camera->view());
@@ -142,3 +142,4 @@ void Dice::paint()
 		texture->release();
 	}
 }
+

@@ -7,6 +7,7 @@ LightModel::LightModel()
 	float _step = 1;
 	QVector<QVector<QVector3D>> _vertexMatrix;
 
+    // 地球仪绘制法：创建球体的顶点
 	for (float _yaw = 0; _yaw <= 180; _yaw += _step)
 	{
 		_vertexMatrix << QVector<QVector3D>();
@@ -24,6 +25,7 @@ LightModel::LightModel()
 		++m_row;
 	}
 
+    // 根据这个结果创建球体的顶点
 	for (int y = 0; y < m_row-1; ++y)
 	{
 		for (int x = 0; x < m_col; ++x)
@@ -44,6 +46,7 @@ LightModel::LightModel()
 		}
 	}
 
+    // 加载纹理
     auto _texture = new QOpenGLTexture(QImage(":/pic/world-map.jpg"));
 	_texture->setMinificationFilter(QOpenGLTexture::LinearMipMapLinear);
 	_texture->setMagnificationFilter(QOpenGLTexture::Linear);
@@ -146,14 +149,15 @@ void LightModel::paint()
 	m_program->setUniformValue("view", m_camera->view());
 	m_program->setUniformValue("model", model());
 	// 绑定灯光颜色
-	m_program->setUniformValue("lightColor", m_light->color().redF(), m_light->color().greenF(), m_light->color().blueF());
-	int _index = 0;
-	// 绘制
+	m_program->setUniformValue("lightColor", m_light->color().redF(), m_light->color().greenF(), m_light->color().blueF());	
+    // 【通过矩形】来绘制。注意：绘制的时候需要计算出来我们一共要绘制多少个矩形
+    int _index = 0;
 	for (int i = 0; i < m_col * (m_row - 1); ++i)
 	{
 		glDrawArrays(GL_TRIANGLE_FAN, _index, 4);
 		_index += 4;
 	}
+
 	m_program->release();
 	m_vao.release();
 	for (auto texture : m_textures)
