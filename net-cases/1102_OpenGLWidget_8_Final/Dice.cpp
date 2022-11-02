@@ -124,7 +124,7 @@ void Dice::paint()
 	m_program->setUniformValue("projection", m_projection);
 	m_program->setUniformValue("view", m_camera->view());
 	m_program->setUniformValue("viewPos", m_camera->pos());
-	m_program->setUniformValue("model", model());
+    m_program->setUniformValue("model", model()); // #TODO 这里让色子动起来，所以要改变model的值
 	// 设定灯光位置与颜色
 	m_program->setUniformValue("light.position", m_light->pos());
 	m_program->setUniformValue("light.color", m_light->color().redF(), m_light->color().greenF(), m_light->color().blueF());
@@ -134,7 +134,7 @@ void Dice::paint()
 	m_program->setUniformValue("material.diffuse", _material.diffuse);
 	m_program->setUniformValue("material.specular", _material.specular);
 	m_program->setUniformValue("material.shininess", _material.shininess);
-	// 绘制
+    // 绘制6个面
 	for (int i = 0; i < 6; ++i)
 	{
 		glDrawArrays(GL_TRIANGLE_FAN, i * 4, 4);
