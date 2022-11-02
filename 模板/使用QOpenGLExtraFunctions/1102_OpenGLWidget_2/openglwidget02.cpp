@@ -1,17 +1,17 @@
 #include "openglwidget02.h"
 
-QOpenGLWidget02::QOpenGLWidget02(QWidget* parent)
+OpenGLWidget02::OpenGLWidget02(QWidget* parent)
     : QOpenGLWidget(parent)
 {
 
 }
 
-QOpenGLWidget02::~QOpenGLWidget02()
+OpenGLWidget02::~OpenGLWidget02()
 {
 
 }
 
-void QOpenGLWidget02::initializeGL()
+void OpenGLWidget02::initializeGL()
 {
     /*
         初始化OpenGL函数
@@ -65,7 +65,7 @@ void QOpenGLWidget02::initializeGL()
 
 }
 
-void QOpenGLWidget02::paintGL()
+void OpenGLWidget02::paintGL()
 {
     /*
      *  清屏
@@ -86,7 +86,7 @@ void QOpenGLWidget02::paintGL()
     m_vao.release();
 }
 
-void QOpenGLWidget02::resizeGL(int w, int h)
+void OpenGLWidget02::resizeGL(int w, int h)
 {
 
 }

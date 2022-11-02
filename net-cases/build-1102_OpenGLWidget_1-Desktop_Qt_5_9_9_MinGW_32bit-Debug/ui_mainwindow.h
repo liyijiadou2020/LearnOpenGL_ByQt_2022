@@ -26,7 +26,7 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    OpenGLWidget02 *openGLWidget;
+    QOpenGLWidget02 *openGLWidget;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -37,9 +37,9 @@ public:
         MainWindow->resize(800, 600);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
-        openGLWidget = new OpenGLWidget02(centralwidget);
+        openGLWidget = new QOpenGLWidget02(centralwidget);
         openGLWidget->setObjectName(QStringLiteral("openGLWidget"));
-        openGLWidget->setGeometry(QRect(20, 100, 300, 200));
+        openGLWidget->setGeometry(QRect(30, 180, 300, 200));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QStringLiteral("menubar"));

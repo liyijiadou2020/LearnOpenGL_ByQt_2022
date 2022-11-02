@@ -12,13 +12,13 @@
 
 
 
-class QOpenGLWidget02 : public QOpenGLWidget, public QOpenGLExtraFunctions
+class OpenGLWidget02 : public QOpenGLWidget, public QOpenGLExtraFunctions
 {
     Q_OBJECT
 
 public:
-    QOpenGLWidget02(QWidget* parent);
-    ~QOpenGLWidget02();
+    OpenGLWidget02(QWidget* parent);
+    ~OpenGLWidget02();
 protected:
     virtual void initializeGL() override;
     virtual void paintGL() override;

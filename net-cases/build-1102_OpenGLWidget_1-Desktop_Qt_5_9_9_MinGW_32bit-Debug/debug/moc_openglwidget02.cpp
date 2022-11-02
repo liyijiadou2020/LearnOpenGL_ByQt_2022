@@ -20,25 +20,25 @@
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
-struct qt_meta_stringdata_OpenGLWidget02_t {
+struct qt_meta_stringdata_QOpenGLWidget02_t {
     QByteArrayData data[1];
-    char stringdata0[15];
+    char stringdata0[16];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_OpenGLWidget02_t, stringdata0) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_QOpenGLWidget02_t, stringdata0) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
-static const qt_meta_stringdata_OpenGLWidget02_t qt_meta_stringdata_OpenGLWidget02 = {
+static const qt_meta_stringdata_QOpenGLWidget02_t qt_meta_stringdata_QOpenGLWidget02 = {
     {
-QT_MOC_LITERAL(0, 0, 14) // "OpenGLWidget02"
+QT_MOC_LITERAL(0, 0, 15) // "QOpenGLWidget02"
 
     },
-    "OpenGLWidget02"
+    "QOpenGLWidget02"
 };
 #undef QT_MOC_LITERAL
 
-static const uint qt_meta_data_OpenGLWidget02[] = {
+static const uint qt_meta_data_QOpenGLWidget02[] = {
 
  // content:
        7,       // revision
@@ -54,7 +54,7 @@ static const uint qt_meta_data_OpenGLWidget02[] = {
        0        // eod
 };
 
-void OpenGLWidget02::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void QOpenGLWidget02::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     Q_UNUSED(_o);
     Q_UNUSED(_id);
@@ -62,28 +62,28 @@ void OpenGLWidget02::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
     Q_UNUSED(_a);
 }
 
-const QMetaObject OpenGLWidget02::staticMetaObject = {
-    { &QOpenGLWidget::staticMetaObject, qt_meta_stringdata_OpenGLWidget02.data,
-      qt_meta_data_OpenGLWidget02,  qt_static_metacall, nullptr, nullptr}
+const QMetaObject QOpenGLWidget02::staticMetaObject = {
+    { &QOpenGLWidget::staticMetaObject, qt_meta_stringdata_QOpenGLWidget02.data,
+      qt_meta_data_QOpenGLWidget02,  qt_static_metacall, nullptr, nullptr}
 };
 
 
-const QMetaObject *OpenGLWidget02::metaObject() const
+const QMetaObject *QOpenGLWidget02::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *OpenGLWidget02::qt_metacast(const char *_clname)
+void *QOpenGLWidget02::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_OpenGLWidget02.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_QOpenGLWidget02.stringdata0))
         return static_cast<void*>(this);
     if (!strcmp(_clname, "QOpenGLExtraFunctions"))
         return static_cast< QOpenGLExtraFunctions*>(this);
     return QOpenGLWidget::qt_metacast(_clname);
 }
 
-int OpenGLWidget02::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int QOpenGLWidget02::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QOpenGLWidget::qt_metacall(_c, _id, _a);
     return _id;
