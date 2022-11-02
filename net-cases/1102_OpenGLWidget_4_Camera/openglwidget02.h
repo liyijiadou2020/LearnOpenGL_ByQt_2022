@@ -43,6 +43,13 @@ private:
     float m_angle=1; // 每帧旋转的角度
 
     /* 摄像机类 */
+    /*
+     * WASD：摄像机前后左右移动方向
+     * C：摄像机沿着Z轴向下
+     * Space：摄像机沿着Z轴向上
+     * 鼠标：摄像机移动视角
+     * Esc：窗口不再追踪鼠标
+     */
     Camera m_camera;
 
 };
