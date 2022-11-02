@@ -1,0 +1,12 @@
+INPUT(
+./debug\camera.o
+./debug\dice.o
+./debug\main.o
+./debug\mainwindow.o
+./debug\Model.o
+./debug\openglwidget02.o
+./debug\qrc_res.o
+./debug\moc_camera.o
+./debug\moc_mainwindow.o
+./debug\moc_openglwidget02.o
+);
