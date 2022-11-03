@@ -3,7 +3,7 @@
 #include <QOpenGLWidget>
 #include <QOpenGLExtraFunctions>
 #include "Camera.h"
-#include "Dice.h"
+#include "CubeModel.h"
 
 class MyOpenGLWidget03 : public QOpenGLWidget, public QOpenGLExtraFunctions
 {

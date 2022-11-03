@@ -6,7 +6,7 @@
 #include <QMouseEvent>
 #include <QPainter>
 
-#include "LightModel.h"
+#include "StableLightModel.h"
 
 #define TIMEOUT 50  // 50 毫秒更新一次
 
@@ -38,13 +38,12 @@ void MyOpenGLWidget03::initializeGL()
 {
 	initializeOpenGLFunctions();
 
-//    glClearColor((float)45/256, (float)36/256, (float)31/256, 1);
     glClearColor(0.2, 0.3, 0.3, 1);
 
     //    然后为所有的模型添加必要的信息：
     for (int i = 0; i < 4; ++i)
     {
-        auto _dice = new Dice();
+        auto _dice = new CubeModel();
         // 摄像机，光源，位置
         _dice->setCamera(&m_camera);
         _dice->setLight(&m_light);
@@ -57,7 +56,7 @@ void MyOpenGLWidget03::initializeGL()
 
     // 画一个球
     if (true) {
-        auto _b = new LightModel();
+        auto _b = new StableLightModel();
         // 摄像机，光源，位置
         _b->setCamera(&m_camera);
         _b->setLight(&m_light);
@@ -69,7 +68,7 @@ void MyOpenGLWidget03::initializeGL()
     }
 
     // 灯源
-    m_lightModel = new LightModel();
+    m_lightModel = new StableLightModel();
 	m_lightModel->setCamera(&m_camera);
 	m_lightModel->setLight(&m_light);
 	m_lightModel->setPos(m_light.pos());

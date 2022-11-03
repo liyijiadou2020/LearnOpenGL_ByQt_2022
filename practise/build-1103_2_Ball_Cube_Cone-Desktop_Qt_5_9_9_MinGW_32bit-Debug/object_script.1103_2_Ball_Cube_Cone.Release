@@ -1,11 +1,12 @@
 INPUT(
+./release\BallModel.o
 ./release\Camera.o
-./release\Cone.o
-./release\Dice.o
+./release\ConeModel.o
+./release\CubeModel.o
 ./release\Light.o
-./release\LightModel.o
 ./release\Model.o
 ./release\MyOpenGLWidget03.o
+./release\StableLightModel.o
 ./release\main.o
 ./release\mainwindow.o
 ./release\qrc_res.o
