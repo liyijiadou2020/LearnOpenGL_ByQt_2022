@@ -39,7 +39,7 @@ void OpenGLWidget::initializeGL()
     glClearColor(0.2, 0.3, 0.3, 1);
 
     //    然后为所有的模型添加必要的信息：
-    for (int i = 0; i < 5; ++i)
+    for (int i = 0; i < 4; ++i)
     {
         auto _dice = new Dice();
         // 摄像机，光源，位置
