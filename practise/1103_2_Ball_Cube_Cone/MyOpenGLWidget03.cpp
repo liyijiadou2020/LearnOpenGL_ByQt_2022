@@ -6,7 +6,9 @@
 #include <QMouseEvent>
 #include <QPainter>
 
-#include "Ball.h"
+#include "LightModel.h"
+
+#define TIMEOUT 50  // 50 毫秒更新一次
 
 MyOpenGLWidget03::MyOpenGLWidget03(QWidget *parent)
 	: QOpenGLWidget(parent)
@@ -23,7 +25,7 @@ MyOpenGLWidget03::MyOpenGLWidget03(QWidget *parent)
 	m_camera.update();
     /* 光源 */
 	m_light.setPos({ 10, 3 , 0 });
-	m_light.setColor(QColor(255, 255, 255));
+    m_light.setColor(QColor(255, 255, 255));
 
 	installEventFilter(&m_camera);
 }
@@ -53,7 +55,21 @@ void MyOpenGLWidget03::initializeGL()
         m_models << _dice;
     }
 
-    m_lightModel = new Ball();
+    // 画一个球
+    if (true) {
+        auto _b = new LightModel();
+        // 摄像机，光源，位置
+        _b->setCamera(&m_camera);
+        _b->setLight(&m_light);
+        _b->setPos({ 0, 5, -10 });
+
+        _b->init();
+
+        m_models << _b;
+    }
+
+    // 灯源
+    m_lightModel = new LightModel();
 	m_lightModel->setCamera(&m_camera);
 	m_lightModel->setLight(&m_light);
 	m_lightModel->setPos(m_light.pos());
@@ -84,8 +100,10 @@ void MyOpenGLWidget03::paintGL()
 		dice->paint();
 	}
 
+
 //    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 	m_lightModel->paint();
+
 
     /* 绘制表示摄像机的瞄准十字 */
     // 在Qt的窗口中绘制UI,记得在QPainter构建之前加上两句话禁用深度测试和背面裁剪
@@ -107,7 +125,30 @@ void MyOpenGLWidget03::_generateCenterCross(QPainter& _painter){
     _painter.drawText(QPoint{ 5, 15 }, QString(u8"Camera Position: (%1, %2, %3)")
         .arg(m_camera.pos().x(), 0, 'f', 3).arg(m_camera.pos().y(), 0, 'f', 3).arg(m_camera.pos().z(), 0, 'f', 3));
     _painter.drawText(QPoint{ 5, 30 }, QString(u8"Camera Angle: (%1, %2, %3)")
-        .arg(m_camera.yaw(), 0, 'f', 3).arg(m_camera.pitch(), 0, 'f', 3).arg(m_camera.roll(), 0, 'f', 3));
+                      .arg(m_camera.yaw(), 0, 'f', 3).arg(m_camera.pitch(), 0, 'f', 3).arg(m_camera.roll(), 0, 'f', 3));
+}
+
+void MyOpenGLWidget03::move3DShape(QVector3D step)
+{
+    if (is_move_sphere)
+    {
+//        _sphere.mat_model.translate(step);
+    }
+
+    if (is_move_cone)
+    {
+//        _cone.mat_model.translate(step);
+    }
+
+    if (is_move_cube)
+    {
+//        _cube.mat_model.translate(step);
+    }
+}
+
+void MyOpenGLWidget03::updateGL()
+{
+    update();
 }
 
 void MyOpenGLWidget03::timerEvent(QTimerEvent *event)
@@ -124,5 +165,30 @@ void MyOpenGLWidget03::timerEvent(QTimerEvent *event)
 	}
 
 	m_lightModel->setPos(m_light.pos());
-	repaint();
+    repaint();
 }
+
+
+void MyOpenGLWidget03::keyPressEvent(QKeyEvent *event)
+{
+    float cameraSpeed = (float)TIMEOUT / (float)1000;
+    float moveSpeed = 0.05;
+
+    switch (event->key())
+    {
+        case Qt::Key_Up:    move3DShape(QVector3D( 0.0f,      moveSpeed, 0.0f));  break;
+        case Qt::Key_Down:  move3DShape(QVector3D( 0.0f,     -moveSpeed, 0.0f));  break;
+        case Qt::Key_Left:  move3DShape(QVector3D(-moveSpeed, 0.0f,      0.0f));  break;
+        case Qt::Key_Right: move3DShape(QVector3D( moveSpeed, 0.0f,      0.0f));  break;
+
+        default: break;
+    }
+
+    update();
+}
+
+
+
+
+
+

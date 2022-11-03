@@ -6,35 +6,35 @@ Dice::Dice()
 	setVertices({
 		//   顶点           纹理	          法线
 		// 1
-            {{-m_length,  m_length,  m_length,}, {0.50, 0.25}, {0, 0, 1}},	// 左上
-            {{-m_length, -m_length,  m_length,}, {0.50, 0.50}, {0, 0, 1}},	// 左下
-            {{ m_length, -m_length,  m_length,}, {0.75, 0.50}, {0, 0, 1}},	// 右下
-            {{ m_length,  m_length,  m_length,}, {0.75, 0.25}, {0, 0, 1}},	// 右上
+            {{-m_length,  m_length,  m_length,}, {0.50, 0.25}, {0, 0, m_length}},	// 左上
+            {{-m_length, -m_length,  m_length,}, {0.50, 0.50}, {0, 0, m_length}},	// 左下
+            {{ m_length, -m_length,  m_length,}, {0.75, 0.50}, {0, 0, m_length}},	// 右下
+            {{ m_length,  m_length,  m_length,}, {0.75, 0.25}, {0, 0, m_length}},	// 右上
 		// 6							
-            {{ m_length,  m_length, -m_length,}, {0.00, 0.25}, {0, 0, -1}},	// 左上
-            {{ m_length, -m_length, -m_length,}, {0.00, 0.50}, {0, 0, -1}},	// 左下
-            {{-m_length, -m_length, -m_length,}, {0.25, 0.50}, {0, 0, -1}},	// 右下
-            {{-m_length,  m_length, -m_length,}, {0.25, 0.25}, {0, 0, -1}},	// 右上
+            {{ m_length,  m_length, -m_length,}, {0.00, 0.25}, {0, 0, -m_length}},	// 左上
+            {{ m_length, -m_length, -m_length,}, {0.00, 0.50}, {0, 0, -m_length}},	// 左下
+            {{-m_length, -m_length, -m_length,}, {0.25, 0.50}, {0, 0, -m_length}},	// 右下
+            {{-m_length,  m_length, -m_length,}, {0.25, 0.25}, {0, 0, -m_length}},	// 右上
 		// 2							
-            {{ m_length,  m_length,  m_length,}, {0.75, 0.25}, {1, 0, 0}},	// 左上
-            {{ m_length, -m_length,  m_length,}, {0.75, 0.50}, {1, 0, 0}},	// 左下
-            {{ m_length, -m_length, -m_length,}, {1.00, 0.50}, {1, 0, 0}},	// 右下
-            {{ m_length,  m_length, -m_length,}, {1.00, 0.25}, {1, 0, 0}},	// 右上
+            {{ m_length,  m_length,  m_length,}, {0.75, 0.25}, {m_length, 0, 0}},	// 左上
+            {{ m_length, -m_length,  m_length,}, {0.75, 0.50}, {m_length, 0, 0}},	// 左下
+            {{ m_length, -m_length, -m_length,}, {1.00, 0.50}, {m_length, 0, 0}},	// 右下
+            {{ m_length,  m_length, -m_length,}, {1.00, 0.25}, {m_length, 0, 0}},	// 右上
 		// 5							
-            {{-m_length,  m_length, -m_length,}, {0.25, 0.25}, {-1, 0, 0}},	// 左上
-            {{-m_length, -m_length, -m_length,}, {0.25, 0.50}, {-1, 0, 0}},	// 左下
-            {{-m_length, -m_length,  m_length,}, {0.50, 0.50}, {-1, 0, 0}},	// 右下
-            {{-m_length,  m_length,  m_length,}, {0.50, 0.25}, {-1, 0, 0}},	// 右上
+            {{-m_length,  m_length, -m_length,}, {0.25, 0.25}, {-m_length, 0, 0}},	// 左上
+            {{-m_length, -m_length, -m_length,}, {0.25, 0.50}, {-m_length, 0, 0}},	// 左下
+            {{-m_length, -m_length,  m_length,}, {0.50, 0.50}, {-m_length, 0, 0}},	// 右下
+            {{-m_length,  m_length,  m_length,}, {0.50, 0.25}, {-m_length, 0, 0}},	// 右上
 		// 3							
-            {{-m_length,  m_length, -m_length,}, {0.00, 0.00}, {0, 1, 0}},	// 左上
-            {{-m_length,  m_length,  m_length,}, {0.00, 0.25}, {0, 1, 0}},	// 左下
-            {{ m_length,  m_length,  m_length,}, {0.25, 0.25}, {0, 1, 0}},	// 右下
-            {{ m_length,  m_length, -m_length,}, {0.25, 0.00}, {0, 1, 0}},	// 右上
+            {{-m_length,  m_length, -m_length,}, {0.00, 0.00}, {0, m_length, 0}},	// 左上
+            {{-m_length,  m_length,  m_length,}, {0.00, 0.25}, {0, m_length, 0}},	// 左下
+            {{ m_length,  m_length,  m_length,}, {0.25, 0.25}, {0, m_length, 0}},	// 右下
+            {{ m_length,  m_length, -m_length,}, {0.25, 0.00}, {0, m_length, 0}},	// 右上
 		// 4							
-            {{-m_length, -m_length,  m_length,}, {0.00, 0.50}, {0, -1, 0}},	// 左上
-            {{-m_length, -m_length, -m_length,}, {0.00, 0.75}, {0, -1, 0}},	// 左下
-            {{ m_length, -m_length, -m_length,}, {0.25, 0.75}, {0, -1, 0}},	// 右下
-            {{ m_length, -m_length,  m_length,}, {0.25, 0.50}, {0, -1, 0}},	// 右上
+            {{-m_length, -m_length,  m_length,}, {0.00, 0.50}, {0, -m_length, 0}},	// 左上
+            {{-m_length, -m_length, -m_length,}, {0.00, 0.75}, {0, -m_length, 0}},	// 左下
+            {{ m_length, -m_length, -m_length,}, {0.25, 0.75}, {0, -m_length, 0}},	// 右下
+            {{ m_length, -m_length,  m_length,}, {0.25, 0.50}, {0, -m_length, 0}},	// 右上
 		});
 
     auto _texture = new QOpenGLTexture(QImage(":/pic/02.png"));

@@ -17,7 +17,8 @@ protected:
 	virtual void resizeGL(int w, int h) override;
 	virtual void paintGL() override;
 
-	virtual void timerEvent(QTimerEvent *event);    
+    virtual void timerEvent(QTimerEvent *event);
+    virtual void keyPressEvent(QKeyEvent* event);
 
 private:
     // 在绘制的时候需要知道这3个信息，才能计算光照和材质
@@ -29,6 +30,19 @@ private:
 	Model *m_lightModel;
     // 用来绘制十字架
     void _generateCenterCross(QPainter&);
+public:
+    void move3DShape(QVector3D step); /* 移动图形 */
+public:
+    bool is_draw_sphere;
+    bool is_move_sphere;
+    bool is_draw_cone;
+    bool is_move_cone;
+    bool is_draw_cube;
+    bool is_move_cube;
+signals:
+
+public slots:
+    void updateGL();
 
 public:
 

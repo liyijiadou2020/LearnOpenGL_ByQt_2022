@@ -1,9 +1,9 @@
 INPUT(
-./debug\Ball.o
 ./debug\Camera.o
 ./debug\Cone.o
 ./debug\Dice.o
 ./debug\Light.o
+./debug\LightModel.o
 ./debug\Model.o
 ./debug\MyOpenGLWidget03.o
 ./debug\main.o
