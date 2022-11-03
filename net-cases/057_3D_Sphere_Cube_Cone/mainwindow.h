@@ -18,19 +18,14 @@ public:
 private slots:
 
     void on_actionWireframe_triggered();
-
     void on_actionClear_triggered();
 
     void on_actionDrawSphere_triggered();
-
     void on_actionDrawCone_triggered();
-
     void on_actionDrawCube_triggered();
 
     void on_actionMoveSphare_triggered();
-
     void on_actionMoveCone_triggered();
-
     void on_actionMoveCube_triggered();
 
 private:

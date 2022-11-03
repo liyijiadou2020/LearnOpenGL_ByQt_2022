@@ -8,7 +8,7 @@
 
 #include "LightModel.h"
 
-OpenGLWidget03::OpenGLWidget03(QWidget *parent)
+OpenGLWidget::OpenGLWidget(QWidget *parent)
 	: QOpenGLWidget(parent)
 {
     //    我们在3D窗口初始化的时候，通过格式设置多重采样
@@ -28,11 +28,11 @@ OpenGLWidget03::OpenGLWidget03(QWidget *parent)
 	installEventFilter(&m_camera);
 }
 
-OpenGLWidget03::~OpenGLWidget03()
+OpenGLWidget::~OpenGLWidget()
 {
 }
 
-void OpenGLWidget03::initializeGL()
+void OpenGLWidget::initializeGL()
 {
 	initializeOpenGLFunctions();
 
@@ -60,7 +60,7 @@ void OpenGLWidget03::initializeGL()
 	m_lightModel->init();
 }
 
-void OpenGLWidget03::resizeGL(int w, int h)
+void OpenGLWidget::resizeGL(int w, int h)
 {
     // 给每个模型设置投影矩阵
 	m_projection.setToIdentity();
@@ -72,7 +72,7 @@ void OpenGLWidget03::resizeGL(int w, int h)
 	m_lightModel->setProjection(m_projection);
 }
 
-void OpenGLWidget03::paintGL()
+void OpenGLWidget::paintGL()
 {
     glEnable(GL_DEPTH_TEST); // 开启深度测试
     glEnable(GL_CULL_FACE); // 为了节省资源，我们可以开启背面裁剪
@@ -92,7 +92,7 @@ void OpenGLWidget03::paintGL()
     _generateCenterCross(_painter);
 }
 
-void OpenGLWidget03::_generateCenterCross(QPainter& _painter){
+void OpenGLWidget::_generateCenterCross(QPainter& _painter){
     glDisable(GL_DEPTH_TEST);
     glDisable(GL_CULL_FACE);
     glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
@@ -109,7 +109,7 @@ void OpenGLWidget03::_generateCenterCross(QPainter& _painter){
         .arg(m_camera.yaw(), 0, 'f', 3).arg(m_camera.pitch(), 0, 'f', 3).arg(m_camera.roll(), 0, 'f', 3));
 }
 
-void OpenGLWidget03::timerEvent(QTimerEvent *event)
+void OpenGLWidget::timerEvent(QTimerEvent *event)
 {
 	m_camera.update();
 	float _speed = 0.1;

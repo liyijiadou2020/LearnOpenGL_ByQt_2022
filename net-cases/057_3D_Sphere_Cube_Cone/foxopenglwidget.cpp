@@ -260,16 +260,11 @@ void FoxOpenGLWidget::paintGL()
     {
         glBindVertexArray(VAOs[0]);
 
-        /* 【重点】使用 QOpenGLShaderProgram 进行着色器绑定 */
-        _sp_sphere.bind();
-        /* 摄像机矩阵 */
-        _sp_sphere.setUniformValue("mat_view", mat_view);
-        /* 透视 */
-        _sp_sphere.setUniformValue("mat_projection", mat_projection);
-
-        /* 模型操作 */
+        _sp_sphere.bind(); /* 【重点】使用 QOpenGLShaderProgram 进行着色器绑定 */
+        _sp_sphere.setUniformValue("mat_view", mat_view); /* 摄像机矩阵 */
+        _sp_sphere.setUniformValue("mat_projection", mat_projection); /* 透视 */
 //        _sphere.mat_model.rotate(time, 1.0f, 3.0f, 0.5f);  // 沿着转轴旋转图形
-        _sp_sphere.setUniformValue("mat_model", _sphere.mat_model);
+        _sp_sphere.setUniformValue("mat_model", _sphere.mat_model); /* 模型操作 */
 
         glDrawElements(GL_TRIANGLES, _sphere.getNumTriangles(), GL_UNSIGNED_INT, 0);
         glBindVertexArray(0);
