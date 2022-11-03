@@ -4,6 +4,7 @@
 #include <QOpenGLExtraFunctions>
 #include "Camera.h"
 #include "Dice.h"
+#include "Ball.h"
 
 class MyOpenGLWidget03 : public QOpenGLWidget, public QOpenGLExtraFunctions
 {
@@ -18,7 +19,8 @@ protected:
 	virtual void paintGL() override;
 
 	virtual void timerEvent(QTimerEvent *event);    
-
+    // 11-03 用来移动模型
+    virtual void keyPressEvent(QKeyEvent *event);
 private:
     // 在绘制的时候需要知道这3个信息，才能计算光照和材质
 	QMatrix4x4 m_projection;
@@ -31,7 +33,16 @@ private:
     void _generateCenterCross(QPainter&);
 
 public:
+    enum Shape {
+      Dice,
+      Ball,
+      Cone
+    };
 
-
-
+    bool is_draw_sphere=false;
+    bool is_move_sphere=false;
+    bool is_draw_cone=false;
+    bool is_move_cone=false;
+    bool is_draw_cube=false;
+    bool is_move_cube=false;
 };

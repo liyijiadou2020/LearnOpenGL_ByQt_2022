@@ -10,11 +10,11 @@ Ball::Ball()
 	QVector<QVector<QVector3D>> _vertexMatrix;
 
     // 地球仪绘制法：创建球体的顶点
-	for (float _yaw = 0; _yaw <= 180; _yaw += _step)
+    for (float _yaw = 0; _yaw <= 180; _yaw += _step)
 	{
 		_vertexMatrix << QVector<QVector3D>();
 		m_col = 0;
-		for (float _pitch = 0; _pitch < 360; _pitch += _step)
+        for (float _pitch = 0; _pitch < 360; _pitch += _step)
 		{
 			QMatrix4x4 _mat;
 			_mat.setToIdentity();
@@ -95,12 +95,9 @@ Ball::~Ball()
 void Ball::init()
 {
 	initializeOpenGLFunctions();
-	if (!m_vao.isCreated())
-		m_vao.create();
-	if (!m_vbo.isCreated())
-		m_vbo.create();
-	if (!m_program->isLinked())
-		m_program->link();
+    if (!m_vao.isCreated()) m_vao.create();
+    if (!m_vbo.isCreated()) m_vbo.create();
+    if (!m_program->isLinked()) m_program->link();
 
 	if (m_vertexCount < m_vertices.count())
 	{
@@ -126,8 +123,9 @@ void Ball::init()
 	m_program->bind();
 	m_program->setAttributeBuffer("vPos", GL_FLOAT, 0 * sizeof(float), 3, 5 * sizeof(float));
 	m_program->enableAttributeArray("vPos");
-	m_program->setAttributeBuffer("vTexture", GL_FLOAT, 3 * sizeof(float), 2, 5 * sizeof(float));
-	m_program->enableAttributeArray("vTexture");
+    // 不需要纹理
+//	m_program->setAttributeBuffer("vTexture", GL_FLOAT, 3 * sizeof(float), 2, 5 * sizeof(float));
+//	m_program->enableAttributeArray("vTexture");
 	m_program->release();
 
 	m_vbo.release();

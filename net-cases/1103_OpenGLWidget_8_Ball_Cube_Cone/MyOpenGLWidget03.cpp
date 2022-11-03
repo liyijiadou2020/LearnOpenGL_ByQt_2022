@@ -7,6 +7,7 @@
 #include <QPainter>
 
 #include "Ball.h"
+#include "Dice.h"
 
 MyOpenGLWidget03::MyOpenGLWidget03(QWidget *parent)
 	: QOpenGLWidget(parent)
@@ -40,7 +41,7 @@ void MyOpenGLWidget03::initializeGL()
     glClearColor(0.2, 0.3, 0.3, 1);
 
     //    然后为所有的模型添加必要的信息：
-    for (int i = 0; i < 4; ++i)
+    for (int i = 0; i < 3; ++i)
     {
         auto _dice = new Dice();
         // 摄像机，光源，位置
@@ -52,6 +53,19 @@ void MyOpenGLWidget03::initializeGL()
 
         m_models << _dice;
     }
+
+    // 11-03 现在来画一个球
+    if (true) {
+        auto _ball = new Ball();
+        _ball->setCamera(&m_camera);
+        _ball->setLight(&m_light);
+        _ball->setPos({ 1, 2, -3 });
+
+        _ball->init();
+
+        m_models << _ball;
+    }
+
 
     m_lightModel = new Ball();
 	m_lightModel->setCamera(&m_camera);
