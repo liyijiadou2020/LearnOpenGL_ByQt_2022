@@ -18,20 +18,20 @@ DEFINES += QT_DEPRECATED_WARNINGS
 LIBS += -lopengl32
 
 SOURCES += \
+    Ball.cpp \
     Camera.cpp \
     Dice.cpp \
     Light.cpp \
-    LightModel.cpp \
     Model.cpp \
     MyOpenGLWidget03.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
+    Ball.h \
     Camera.h \
     Dice.h \
     Light.h \
-    LightModel.h \
     Model.h \
     MyOpenGLWidget03.h \
     mainwindow.h

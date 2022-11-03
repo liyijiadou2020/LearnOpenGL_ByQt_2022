@@ -6,7 +6,7 @@
 #include <QMouseEvent>
 #include <QPainter>
 
-#include "LightModel.h"
+#include "Ball.h"
 
 MyOpenGLWidget03::MyOpenGLWidget03(QWidget *parent)
 	: QOpenGLWidget(parent)

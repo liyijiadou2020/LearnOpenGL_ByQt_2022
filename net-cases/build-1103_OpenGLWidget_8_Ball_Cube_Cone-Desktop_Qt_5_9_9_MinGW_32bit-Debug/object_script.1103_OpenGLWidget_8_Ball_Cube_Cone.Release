@@ -1,8 +1,8 @@
 INPUT(
+./release\Ball.o
 ./release\Camera.o
 ./release\Dice.o
 ./release\Light.o
-./release\LightModel.o
 ./release\Model.o
 ./release\MyOpenGLWidget03.o
 ./release\main.o
