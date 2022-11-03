@@ -16,7 +16,6 @@ public:
     ~MainWindow();
 
 private slots:
-//    void on_actionDrawRect_triggered();
 
     void on_actionWireframe_triggered();
 

@@ -38,19 +38,14 @@ public:
     Camera(float pos_x, float pos_y, float pos_z,
            float up_x, float up_y, float up_z,
            float zoom_fov, float yaw, float pitch);
-
     /* 移动摄像机（相对于摄像机指向平面 前后上下移动） */
     void moveCamera(Camera_Movement direction, float delta_time);
-
     /* 改变摄像机指向，需要x和y方向上的偏移量 */
     void changeCameraFront(float x_offset, float y_offset, bool constrain_pitch);
-
     /* 改变摄像机的镜头视角（缩放） */
     void changeCameraZoomFov(float offset);
-
     /* 返回 View 观察矩阵（世界） */
     QMatrix4x4 getViewMatrix();
-
 
 private:
     /* 根据相机的（更新后的）Euler角度计算前矢量 */

@@ -71,4 +71,7 @@ protected:
 	QMatrix4x4 m_projection;
 	Camera *m_camera = nullptr;
 	Light *m_light = nullptr;
+
+    /* #TODO 11-03：新增 m_model 模型矩阵 */
+    QMatrix4x4 m_model;
 };

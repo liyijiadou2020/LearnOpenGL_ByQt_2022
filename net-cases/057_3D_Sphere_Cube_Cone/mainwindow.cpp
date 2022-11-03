@@ -14,10 +14,6 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-//void MainWindow::on_actionDrawRect_triggered()
-//{
-//    ui->openGLWidget->drawShape(FoxOpenGLWidget::Shape::Rect);
-//}
 
 void MainWindow::on_actionWireframe_triggered()
 {
@@ -26,7 +22,7 @@ void MainWindow::on_actionWireframe_triggered()
 
 void MainWindow::on_actionClear_triggered()
 {
-    ui->openGLWidget->drawShape(FoxOpenGLWidget::Shape::None);
+//    ui->openGLWidget->drawShape(FoxOpenGLWidget::Shape::None);
 }
 
 void MainWindow::on_actionDrawSphere_triggered()

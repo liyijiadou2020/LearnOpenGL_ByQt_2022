@@ -14,27 +14,18 @@ class Cone
 {
 public:
     Cone();
-    Cone(const float r, const float height, const float step_angle);
-
-    /* 获取绘制三角形的数量 */
-    unsigned int getNumTrianglesinSphere();
-
-
+    Cone(const float r, const float height, const float step_angle);    
+    unsigned int getNumTrianglesinSphere(); /* 获取绘制三角形的数量 */
 private:
     void _genVectorVerticesAndIndices();
-
-
 public:
     std::vector<float> vertices;    // 顶点
     std::vector<int> indices;       // EBO 索引s
-
     QMatrix4x4 mat_model;
-
 private:
     float _r;       // 半径
     float _height;  // 高度
     float _step_angle;  // 底的角度间隔
-
 };
 
 #endif // CONE_HPP

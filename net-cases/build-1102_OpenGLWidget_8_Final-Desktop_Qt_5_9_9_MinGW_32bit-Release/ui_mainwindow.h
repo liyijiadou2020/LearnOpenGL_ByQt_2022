@@ -30,11 +30,16 @@ public:
     QAction *act_DrawCube;
     QAction *act_DrawBall;
     QAction *act_DrawCone;
+    QAction *actionMove;
+    QAction *act_MoveCube;
+    QAction *act_MoveBall;
+    QAction *act_MoveCone;
     QWidget *centralwidget;
     OpenGLWidget *openGLWidget;
     QMenuBar *menubar;
     QStatusBar *statusbar;
     QToolBar *toolBar;
+    QToolBar *toolBar_2;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -60,8 +65,18 @@ public:
         act_DrawCube->setCheckable(true);
         act_DrawBall = new QAction(MainWindow);
         act_DrawBall->setObjectName(QStringLiteral("act_DrawBall"));
+        act_DrawBall->setCheckable(true);
         act_DrawCone = new QAction(MainWindow);
         act_DrawCone->setObjectName(QStringLiteral("act_DrawCone"));
+        act_DrawCone->setCheckable(true);
+        actionMove = new QAction(MainWindow);
+        actionMove->setObjectName(QStringLiteral("actionMove"));
+        act_MoveCube = new QAction(MainWindow);
+        act_MoveCube->setObjectName(QStringLiteral("act_MoveCube"));
+        act_MoveBall = new QAction(MainWindow);
+        act_MoveBall->setObjectName(QStringLiteral("act_MoveBall"));
+        act_MoveCone = new QAction(MainWindow);
+        act_MoveCone->setObjectName(QStringLiteral("act_MoveCone"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         openGLWidget = new OpenGLWidget(centralwidget);
@@ -78,11 +93,19 @@ public:
         toolBar = new QToolBar(MainWindow);
         toolBar->setObjectName(QStringLiteral("toolBar"));
         MainWindow->addToolBar(Qt::TopToolBarArea, toolBar);
+        toolBar_2 = new QToolBar(MainWindow);
+        toolBar_2->setObjectName(QStringLiteral("toolBar_2"));
+        MainWindow->addToolBar(Qt::TopToolBarArea, toolBar_2);
+        MainWindow->insertToolBarBreak(toolBar_2);
 
         toolBar->addAction(actionShow);
         toolBar->addAction(act_DrawCube);
         toolBar->addAction(act_DrawBall);
         toolBar->addAction(act_DrawCone);
+        toolBar_2->addAction(actionMove);
+        toolBar_2->addAction(act_MoveCube);
+        toolBar_2->addAction(act_MoveBall);
+        toolBar_2->addAction(act_MoveCone);
 
         retranslateUi(MainWindow);
 
@@ -96,7 +119,12 @@ public:
         act_DrawCube->setText(QApplication::translate("MainWindow", "Cube", Q_NULLPTR));
         act_DrawBall->setText(QApplication::translate("MainWindow", "Ball", Q_NULLPTR));
         act_DrawCone->setText(QApplication::translate("MainWindow", "Cone", Q_NULLPTR));
+        actionMove->setText(QApplication::translate("MainWindow", "Move:", Q_NULLPTR));
+        act_MoveCube->setText(QApplication::translate("MainWindow", "Cube", Q_NULLPTR));
+        act_MoveBall->setText(QApplication::translate("MainWindow", "Ball", Q_NULLPTR));
+        act_MoveCone->setText(QApplication::translate("MainWindow", "Cone", Q_NULLPTR));
         toolBar->setWindowTitle(QApplication::translate("MainWindow", "toolBar", Q_NULLPTR));
+        toolBar_2->setWindowTitle(QApplication::translate("MainWindow", "toolBar_2", Q_NULLPTR));
     } // retranslateUi
 
 };

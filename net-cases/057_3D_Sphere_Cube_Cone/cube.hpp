@@ -19,7 +19,6 @@ private:
 
 public:
     std::vector<float> vertices;  // 顶点
-
     QMatrix4x4 mat_model;
 
 private:

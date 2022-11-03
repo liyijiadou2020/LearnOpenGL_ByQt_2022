@@ -22,7 +22,7 @@ QPoint delta_pos;
 
 FoxOpenGLWidget::FoxOpenGLWidget(QWidget* parent) : QOpenGLWidget(parent)
 {
-    this->current_shape_ = Shape::None;
+//    this->current_shape_ = Shape::None;
 
     this->_sphere = Sphere(X_SPHERE_SEGMENTS, Y_SPHERE_SEGMENTS);
     this->_cone = Cone(R, HEIGHT, 10.0);
@@ -271,7 +271,7 @@ void FoxOpenGLWidget::paintGL()
 //        _sphere.mat_model.rotate(time, 1.0f, 3.0f, 0.5f);  // 沿着转轴旋转图形
         _sp_sphere.setUniformValue("mat_model", _sphere.mat_model);
 
-        glDrawElements(GL_TRIANGLES, _sphere.getNumTrianglesinSphere(), GL_UNSIGNED_INT, 0);
+        glDrawElements(GL_TRIANGLES, _sphere.getNumTriangles(), GL_UNSIGNED_INT, 0);
         glBindVertexArray(0);
     }
 
@@ -304,14 +304,6 @@ void FoxOpenGLWidget::paintGL()
     }
 
 }
-
-
-void FoxOpenGLWidget::drawShape(FoxOpenGLWidget::Shape shape)
-{
-    this->current_shape_ = shape;
-    update();  // 【重点】注意使用 update() 进行重绘，也就是这条语句会重新调用 paintGL()
-}
-
 
 void FoxOpenGLWidget::setWirefame(bool wirefame)
 {
@@ -359,25 +351,24 @@ void FoxOpenGLWidget::keyPressEvent(QKeyEvent *event)
 
     switch (event->key())
     {
+        /* 键盘 +/-键改变透明度 */
+        case Qt::Key_Minus: val_alpha += 0.1; break;
+        case Qt::Key_Plus: val_alpha -= 0.1; break;
 
-    /* 键盘 +/-键改变透明度 */
-    case Qt::Key_Minus: val_alpha += 0.1; break;
-    case Qt::Key_Plus: val_alpha -= 0.1; break;
+        /* 键盘WASD移动摄像机 */
+        case Qt::Key_W:     camera_.moveCamera(Camera_Movement::FORWARD,    cameraSpeed);  break;
+        case Qt::Key_A:     camera_.moveCamera(Camera_Movement::LEFT,       cameraSpeed);  break;
+        case Qt::Key_S:     camera_.moveCamera(Camera_Movement::BACKWARD,   cameraSpeed);  break;
+        case Qt::Key_D:     camera_.moveCamera(Camera_Movement::RIGHT,      cameraSpeed);  break;
+        case Qt::Key_Space: camera_.moveCamera(Camera_Movement::UP,         cameraSpeed);  break;
+        case Qt::Key_Shift: camera_.moveCamera(Camera_Movement::DOWN,       cameraSpeed);  break;
 
-    /* 键盘WASD移动摄像机 */
-    case Qt::Key_W:     camera_.moveCamera(Camera_Movement::FORWARD,    cameraSpeed);  break;
-    case Qt::Key_A:     camera_.moveCamera(Camera_Movement::LEFT,       cameraSpeed);  break;
-    case Qt::Key_S:     camera_.moveCamera(Camera_Movement::BACKWARD,   cameraSpeed);  break;
-    case Qt::Key_D:     camera_.moveCamera(Camera_Movement::RIGHT,      cameraSpeed);  break;
-    case Qt::Key_Space: camera_.moveCamera(Camera_Movement::UP,         cameraSpeed);  break;
-    case Qt::Key_Shift: camera_.moveCamera(Camera_Movement::DOWN,       cameraSpeed);  break;
+        case Qt::Key_Up:    move3DShape(QVector3D( 0.0f,      moveSpeed, 0.0f));  break;
+        case Qt::Key_Down:  move3DShape(QVector3D( 0.0f,     -moveSpeed, 0.0f));  break;
+        case Qt::Key_Left:  move3DShape(QVector3D(-moveSpeed, 0.0f,      0.0f));  break;
+        case Qt::Key_Right: move3DShape(QVector3D( moveSpeed, 0.0f,      0.0f));  break;
 
-    case Qt::Key_Up:    move3DShape(QVector3D( 0.0f,      moveSpeed, 0.0f));  break;
-    case Qt::Key_Down:  move3DShape(QVector3D( 0.0f,     -moveSpeed, 0.0f));  break;
-    case Qt::Key_Left:  move3DShape(QVector3D(-moveSpeed, 0.0f,      0.0f));  break;
-    case Qt::Key_Right: move3DShape(QVector3D( moveSpeed, 0.0f,      0.0f));  break;
-
-    default: break;
+        default: break;
     }
 
     if (val_alpha > 1.0) val_alpha = 1.0;

@@ -15,20 +15,16 @@ class Sphere
 {
 public:
     Sphere();
-    Sphere(const unsigned int x_segments, const unsigned int y_segments);
-
-    /* 获取绘制三角形的数量 */
-    unsigned int getNumTrianglesinSphere();
+    Sphere(const unsigned int x_segments, const unsigned int y_segments);    
+    unsigned int getNumTriangles();/* 获取绘制三角形的数量 */
 
 private:
     void _genVectorVerticesAndIndices();
 
-
 public:
     std::vector<float> vertices;  // 顶点
     std::vector<int> indices; // EBO 索引s
-
-    QMatrix4x4 mat_model;
+    QMatrix4x4 mat_model; // 模型矩阵
 
 private:
     unsigned int _x_segments;

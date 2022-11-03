@@ -83,7 +83,7 @@ void OpenGLWidget::paintGL()
 		dice->paint();
 	}
 
-//	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+//    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 	m_lightModel->paint();
 
     /* 绘制表示摄像机的瞄准十字 */
@@ -95,7 +95,7 @@ void OpenGLWidget::paintGL()
 void OpenGLWidget::_generateCenterCross(QPainter& _painter){
     glDisable(GL_DEPTH_TEST);
     glDisable(GL_CULL_FACE);
-//    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
     auto _rect = this->rect();
     _painter.setPen(Qt::green);
     _painter.drawLine(_rect.center() + QPoint{ 0, 5 }, _rect.center() + QPoint{ 0, 15 });
