@@ -7,6 +7,9 @@
 #include <QPainter>
 
 #include "StableLightModel.h"
+#include "BallModel.h"
+#include "ConeModel.h"
+#include "CubeModel.h"
 
 #define TIMEOUT 50  // 50 毫秒更新一次
 
@@ -54,9 +57,10 @@ void MyOpenGLWidget03::initializeGL()
         m_models << _dice;
     }
 
+
     // 画一个球
     if (true) {
-        auto _b = new StableLightModel();
+        auto _b = new BallModel();
         // 摄像机，光源，位置
         _b->setCamera(&m_camera);
         _b->setLight(&m_light);

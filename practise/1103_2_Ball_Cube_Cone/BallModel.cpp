@@ -14,7 +14,7 @@ BallModel::BallModel()
 		_vertexMatrix << QVector<QVector3D>();
 		m_col = 0;
 		for (float _pitch = 0; _pitch < 360; _pitch += _step)
-		{
+        {
 			QMatrix4x4 _mat;
 			_mat.setToIdentity();
 			_mat.rotate(_yaw, 1, 0, 0);
@@ -48,42 +48,45 @@ BallModel::BallModel()
 	}
 
 //     加载纹理
-    auto _texture = new QOpenGLTexture(QImage(":/pic/world-map.jpg"));
-    _texture->setMinificationFilter(QOpenGLTexture::LinearMipMapLinear);
-    _texture->setMagnificationFilter(QOpenGLTexture::Linear);
-    setTexture(_texture);
+//    auto _texture = new QOpenGLTexture(QImage(":/pic/world-map.jpg"));
+//    _texture->setMinificationFilter(QOpenGLTexture::LinearMipMapLinear);
+//    _texture->setMagnificationFilter(QOpenGLTexture::Linear);
+//    setTexture(_texture);
 
 	auto _program = new QOpenGLShaderProgram();
-	_program->addShaderFromSourceCode(QOpenGLShader::Vertex, u8R"(
-#version 330 core
-in vec3 vPos;
-in vec2 vTexture;
-out vec2 TexCoords;
+//	_program->addShaderFromSourceCode(QOpenGLShader::Vertex, u8R"(
+//#version 330 core
+//in vec3 vPos;
+//in vec2 vTexture;
+//out vec2 TexCoords;
 
-uniform mat4 projection;
-uniform mat4 view;
-uniform mat4 model;
+//uniform mat4 projection;
+//uniform mat4 view;
+//uniform mat4 model;
 
-void main()
-{
-	TexCoords = vTexture;
+//void main()
+//{
+//	TexCoords = vTexture;
 
-    gl_Position = projection * view * model * vec4(vPos, 1.0);
-}
-)");
-	_program->addShaderFromSourceCode(QOpenGLShader::Fragment, u8R"(
-#version 330 core
-out vec4 FragColor;
-in vec2 TexCoords;
+//    gl_Position = projection * view * model * vec4(vPos, 1.0);
+//}
+//)");
+//	_program->addShaderFromSourceCode(QOpenGLShader::Fragment, u8R"(
+//#version 330 core
+//out vec4 FragColor;
+//in vec2 TexCoords;
 
-uniform vec3 lightColor;
-uniform sampler2D Texture;
+//uniform vec3 lightColor;
+//uniform sampler2D Texture;
 
-void main()
-{
-    FragColor = vec4(texture(Texture, TexCoords).rgb * lightColor, 1.0);
-} 
-)");
+//void main()
+//{
+//    FragColor = vec4(texture(Texture, TexCoords).rgb * lightColor, 1.0);
+//}
+//)");
+
+    // 11-03 #TODO 验证
+    _program->addShaderFromSourceFile(QOpenGLShader::Fragment, ":shader/fragment.shader");
 	setShaderProgram(_program);
 }
 
