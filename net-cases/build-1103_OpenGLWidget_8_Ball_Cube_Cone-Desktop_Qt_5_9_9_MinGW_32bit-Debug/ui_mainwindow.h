@@ -73,10 +73,13 @@ public:
         actionMove->setObjectName(QStringLiteral("actionMove"));
         act_MoveCube = new QAction(MainWindow);
         act_MoveCube->setObjectName(QStringLiteral("act_MoveCube"));
+        act_MoveCube->setCheckable(true);
         act_MoveBall = new QAction(MainWindow);
         act_MoveBall->setObjectName(QStringLiteral("act_MoveBall"));
+        act_MoveBall->setCheckable(true);
         act_MoveCone = new QAction(MainWindow);
         act_MoveCone->setObjectName(QStringLiteral("act_MoveCone"));
+        act_MoveCone->setCheckable(true);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         openGLWidget = new MyOpenGLWidget03(centralwidget);

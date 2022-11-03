@@ -115,16 +115,25 @@ QWidget:checked {
    </property>
   </action>
   <action name="act_MoveCube">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="text">
     <string>Cube</string>
    </property>
   </action>
   <action name="act_MoveBall">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="text">
     <string>Ball</string>
    </property>
   </action>
   <action name="act_MoveCone">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="text">
     <string>Cone</string>
    </property>

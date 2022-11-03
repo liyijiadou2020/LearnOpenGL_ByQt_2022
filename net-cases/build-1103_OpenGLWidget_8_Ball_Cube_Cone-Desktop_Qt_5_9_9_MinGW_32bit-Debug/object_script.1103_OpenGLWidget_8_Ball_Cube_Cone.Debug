@@ -4,12 +4,12 @@ INPUT(
 ./debug\Light.o
 ./debug\LightModel.o
 ./debug\Model.o
-./debug\OpenGLWidget.o
+./debug\MyOpenGLWidget03.o
 ./debug\main.o
 ./debug\mainwindow.o
 ./debug\qrc_res.o
 ./debug\moc_Camera.o
 ./debug\moc_Light.o
-./debug\moc_OpenGLWidget.o
+./debug\moc_MyOpenGLWidget03.o
 ./debug\moc_mainwindow.o
 );

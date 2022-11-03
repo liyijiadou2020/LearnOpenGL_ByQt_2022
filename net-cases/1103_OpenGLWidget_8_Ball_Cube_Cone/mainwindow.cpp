@@ -18,3 +18,28 @@ void MainWindow::on_act_DrawCube_triggered()
 {
 
 }
+
+void MainWindow::on_act_DrawBall_triggered()
+{
+
+}
+
+void MainWindow::on_act_DrawCone_triggered()
+{
+
+}
+
+void MainWindow::on_act_MoveCube_triggered()
+{
+
+}
+
+void MainWindow::on_act_MoveBall_triggered()
+{
+
+}
+
+void MainWindow::on_act_MoveCone_triggered()
+{
+
+}

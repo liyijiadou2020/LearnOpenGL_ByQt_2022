@@ -4,12 +4,12 @@ INPUT(
 ./release\Light.o
 ./release\LightModel.o
 ./release\Model.o
-./release\OpenGLWidget.o
+./release\MyOpenGLWidget03.o
 ./release\main.o
 ./release\mainwindow.o
 ./release\qrc_res.o
 ./release\moc_Camera.o
 ./release\moc_Light.o
-./release\moc_OpenGLWidget.o
+./release\moc_MyOpenGLWidget03.o
 ./release\moc_mainwindow.o
 );

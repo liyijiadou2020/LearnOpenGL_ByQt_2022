@@ -1,5 +1,5 @@
 #include <QtWidgets/QApplication>
-#include "OpenGLWidget.h"
+#include "MyOpenGLWidget03.h"
 #include "mainwindow.h"
 
 

@@ -23,7 +23,7 @@ SOURCES += \
     Light.cpp \
     LightModel.cpp \
     Model.cpp \
-    OpenGLWidget.cpp \
+    MyOpenGLWidget03.cpp \
     main.cpp \
     mainwindow.cpp
 
@@ -32,8 +32,8 @@ HEADERS += \
     Dice.h \
     Light.h \
     LightModel.h \
-    OpenGLWidget.h \
     Model.h \
+    MyOpenGLWidget03.h \
     mainwindow.h
 
 FORMS += \
