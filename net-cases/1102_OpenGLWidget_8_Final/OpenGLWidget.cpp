@@ -52,7 +52,7 @@ void MyOpenGLWidget03::initializeGL()
         m_models << _dice;
     }
 
-	m_lightModel = new LightModel();
+    m_lightModel = new Ball();
 	m_lightModel->setCamera(&m_camera);
 	m_lightModel->setLight(&m_light);
 	m_lightModel->setPos(m_light.pos());

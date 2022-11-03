@@ -1,6 +1,6 @@
 #include "LightModel.h"
 
-LightModel::LightModel()
+Ball::Ball()
 	:Model()
 {
 	QVector3D _top{ 0,1,0 };
@@ -86,11 +86,11 @@ void main()
 	setShaderProgram(_program);
 }
 
-LightModel::~LightModel()
+Ball::~Ball()
 {
 }
 
-void LightModel::init()
+void Ball::init()
 {
 	initializeOpenGLFunctions();
 	if (!m_vao.isCreated())
@@ -132,11 +132,11 @@ void LightModel::init()
 	m_vao.release();
 }
 
-void LightModel::update()
+void Ball::update()
 {
 }
 
-void LightModel::paint()
+void Ball::paint()
 {
 	for (auto index : m_textures.keys())
 	{

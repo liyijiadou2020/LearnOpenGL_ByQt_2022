@@ -2,11 +2,11 @@
 
 #include "Dice.h"
 
-class LightModel : public Model
+class Ball : public Model
 {
 public:
-	LightModel();
-	~LightModel();
+	Ball();
+	~Ball();
 public:
 	virtual void init() override;
 	virtual void update() override;
