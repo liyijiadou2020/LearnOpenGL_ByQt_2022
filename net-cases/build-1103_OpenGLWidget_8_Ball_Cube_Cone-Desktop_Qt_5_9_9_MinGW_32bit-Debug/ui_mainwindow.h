@@ -35,7 +35,7 @@ public:
     QAction *act_MoveBall;
     QAction *act_MoveCone;
     QWidget *centralwidget;
-    OpenGLWidget *openGLWidget;
+    MyOpenGLWidget03 *openGLWidget;
     QMenuBar *menubar;
     QStatusBar *statusbar;
     QToolBar *toolBar;
@@ -79,7 +79,7 @@ public:
         act_MoveCone->setObjectName(QStringLiteral("act_MoveCone"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
-        openGLWidget = new OpenGLWidget(centralwidget);
+        openGLWidget = new MyOpenGLWidget03(centralwidget);
         openGLWidget->setObjectName(QStringLiteral("openGLWidget"));
         openGLWidget->setGeometry(QRect(110, 60, 551, 351));
         MainWindow->setCentralWidget(centralwidget);

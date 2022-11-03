@@ -5,13 +5,13 @@
 #include "Camera.h"
 #include "Dice.h"
 
-class OpenGLWidget03 : public QOpenGLWidget, public QOpenGLExtraFunctions
+class MyOpenGLWidget03 : public QOpenGLWidget, public QOpenGLExtraFunctions
 {
 	Q_OBJECT
 
 public:
-    OpenGLWidget03(QWidget *parent = nullptr);
-    ~OpenGLWidget03();
+    MyOpenGLWidget03(QWidget *parent = nullptr);
+    ~MyOpenGLWidget03();
 protected:
 	virtual void initializeGL() override;
 	virtual void resizeGL(int w, int h) override;
