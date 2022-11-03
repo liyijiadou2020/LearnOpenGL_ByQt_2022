@@ -14,4 +14,5 @@ public:
 private:
 	float *m_vertexBuffer = nullptr;
 	int m_vertexCount = 0;
+    float m_length = 1.0;
 };

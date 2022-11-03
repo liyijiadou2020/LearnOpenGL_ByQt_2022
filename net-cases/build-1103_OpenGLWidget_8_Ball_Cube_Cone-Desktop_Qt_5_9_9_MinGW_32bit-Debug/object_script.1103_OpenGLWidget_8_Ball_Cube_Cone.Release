@@ -1,6 +1,7 @@
 INPUT(
 ./release\Ball.o
 ./release\Camera.o
+./release\Cone.o
 ./release\Dice.o
 ./release\Light.o
 ./release\Model.o

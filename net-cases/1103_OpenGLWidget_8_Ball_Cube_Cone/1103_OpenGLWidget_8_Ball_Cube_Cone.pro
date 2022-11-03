@@ -20,6 +20,7 @@ LIBS += -lopengl32
 SOURCES += \
     Ball.cpp \
     Camera.cpp \
+    Cone.cpp \
     Dice.cpp \
     Light.cpp \
     Model.cpp \
@@ -30,6 +31,7 @@ SOURCES += \
 HEADERS += \
     Ball.h \
     Camera.h \
+    Cone.h \
     Dice.h \
     Light.h \
     Model.h \

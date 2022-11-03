@@ -5,7 +5,7 @@
 class Ball : public Model
 {
 public:
-    Ball();
+    Ball(); // #TODO：要添加球的法线坐标，算法参考https://dhbloo.github.io/2020/03/12/Sphere/#%E7%90%83%E5%9D%90%E6%A0%87%E8%BD%AC%E6%8D%A2
     ~Ball();
 public:
 	virtual void init() override;

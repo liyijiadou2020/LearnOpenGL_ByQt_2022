@@ -1,5 +1,7 @@
 #include "Ball.h"
 
+//# TODO 没有法线向量！
+
 Ball::Ball()
 	:Model()
 {

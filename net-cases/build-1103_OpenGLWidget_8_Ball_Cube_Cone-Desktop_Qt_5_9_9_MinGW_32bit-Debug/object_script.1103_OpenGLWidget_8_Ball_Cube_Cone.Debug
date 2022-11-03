@@ -1,6 +1,7 @@
 INPUT(
 ./debug\Ball.o
 ./debug\Camera.o
+./debug\Cone.o
 ./debug\Dice.o
 ./debug\Light.o
 ./debug\Model.o
