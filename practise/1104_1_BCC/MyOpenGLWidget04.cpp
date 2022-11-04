@@ -5,6 +5,7 @@
 #include <QKeyEvent>
 #include <QMouseEvent>
 #include <QPainter>
+#include <math.h>
 
 #include "StableLightModel.h"
 #include "BallModel.h"
@@ -17,9 +18,9 @@ MyOpenGLWidget04::MyOpenGLWidget04(QWidget *parent)
 	: QOpenGLWidget(parent)
 {
     //    我们在3D窗口初始化的时候，通过格式设置多重采样
-	auto newFormat = this->format();
-	newFormat.setSamples(16);
-    this->setFormat(newFormat);
+//	auto newFormat = this->format();
+//	newFormat.setSamples(16);
+//    this->setFormat(newFormat);
 
 	startTimer(1000 / 60);
     /* 摄像机 */
@@ -27,10 +28,12 @@ MyOpenGLWidget04::MyOpenGLWidget04(QWidget *parent)
 	m_camera.look(0, 30, 0);
 	m_camera.update();
     /* 光源 */
-    m_light.setPos({ 10, 3, 3 });
+    m_light.setPos({ -5, 3, 3 });
     m_light.setColor(QColor(255, 255, 255));
-
+    /* 让摄像机监控键盘的WASDC和Space */
 	installEventFilter(&m_camera);
+    /* 时间 */
+    m_time.start();
 }
 
 MyOpenGLWidget04::~MyOpenGLWidget04()
@@ -41,6 +44,7 @@ void MyOpenGLWidget04::initializeGL()
 {
 	initializeOpenGLFunctions();
     glClearColor(0.2, 0.3, 0.3, 1);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     if (true) {
         auto _dice = new CubeModel();
@@ -78,7 +82,7 @@ void MyOpenGLWidget04::initializeGL()
 	m_lightModel->setCamera(&m_camera);
 	m_lightModel->setLight(&m_light);
 	m_lightModel->setPos(m_light.pos());
-    m_lightModel->setScale(0.1);
+    m_lightModel->setScale(0.5);
 	m_lightModel->init();
 }
 
@@ -105,9 +109,12 @@ void MyOpenGLWidget04::paintGL()
 		dice->paint();
 	}
 
-//    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-	m_lightModel->paint();
+    // 让灯光绕着
+    float time=m_time.elapsed()/50.0;
+    m_light.setX(cos(time/50)*5.0);
+    m_light.setZ(sin(time/50)*5.0);
 
+	m_lightModel->paint();
 
     /* 绘制表示摄像机的瞄准十字 */
     // 在Qt的窗口中绘制UI,记得在QPainter构建之前加上两句话禁用深度测试和背面裁剪
@@ -168,7 +175,8 @@ void MyOpenGLWidget04::timerEvent(QTimerEvent *event)
         _speed += 1.0; // 每个模型的转动速度是不同的
 	}
 
-	m_lightModel->setPos(m_light.pos());
+    m_lightModel->setPos(m_light.pos());
+
     repaint();
 }
 

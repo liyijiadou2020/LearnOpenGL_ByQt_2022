@@ -2,6 +2,8 @@
 
 #include <QOpenGLWidget>
 #include <QOpenGLExtraFunctions>
+#include <QTime>
+
 #include "Camera.h"
 #include "CubeModel.h"
 
@@ -41,7 +43,8 @@ signals:
 public slots:
     void updateGL();
 
-public:
+private:
+    QTime m_time;
 
 
 
