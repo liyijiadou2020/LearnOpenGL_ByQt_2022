@@ -36,7 +36,7 @@ This rep is for demo code and test code, which is written for learning OpenGL.
 打开光源 - 例如，点，白色。我们展示了它的运动，例如，改变灯光的颜色。
 
 
-任务编号 3。
+## 任务编号 3
 
 该任务的目的是显示对象形状的变化，即将一个三维对象转换为另一个。变化应该是平滑的，逐步的，提供至少 8 个变形步骤。使用 OpenGL 或 DirectX 库执行任务
 对象应该描绘可识别的对象，但也可以是原始形式的组合。场景中必须包含光源。
