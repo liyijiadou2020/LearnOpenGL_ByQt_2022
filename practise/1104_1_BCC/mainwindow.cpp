@@ -15,7 +15,6 @@ MainWindow::~MainWindow()
 }
 
 
-
 void MainWindow::on_actionDice_triggered()
 {
      ui->openGLWidget->is_move_dice = ui->actionDice->isChecked();
@@ -29,4 +28,9 @@ void MainWindow::on_actionBall_triggered()
 void MainWindow::on_actionCone_triggered()
 {
     ui->openGLWidget->is_move_cone = ui->actionCone->isChecked();
+}
+
+void MainWindow::on_actionChange_Color_of_Light_triggered()
+{
+    ui->openGLWidget->is_change_color = ui->actionCone->isChecked();
 }

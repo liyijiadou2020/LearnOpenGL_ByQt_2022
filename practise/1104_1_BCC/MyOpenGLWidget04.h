@@ -38,6 +38,7 @@ public:
     bool is_move_ball=false;
     bool is_move_cone=false;
     bool is_move_dice=false;
+    bool is_change_color=false;
 signals:
 
 public slots:

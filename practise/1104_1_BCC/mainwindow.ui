@@ -105,6 +105,14 @@ QWidget:checked {
     <string>Cone</string>
    </property>
   </action>
+  <action name="actionChange_Color_of_Light">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Change Color of Light</string>
+   </property>
+  </action>
  </widget>
  <customwidgets>
   <customwidget>

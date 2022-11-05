@@ -21,7 +21,7 @@ ConeModel::ConeModel()
         tmp_vetices.push_back(_r*sin(current_angle*M_PI/180)); // z
 
         current_angle += _step_angle;
-    }    
+    }
 
 
     /* 推入侧边的顶点数据（位置 1：顶点坐标；位置 2：法线） */
@@ -100,9 +100,16 @@ ConeModel::ConeModel()
         vertices.push_back(current_normal.z());
     }
 
+    Material m;
+    m.ambient=0.3;
+    m.diffuse=0.6;
+    m.specular=0.9;
+    m.shininess=128;
+    setMaterial(m);
+
     auto _program = new QOpenGLShaderProgram();
-    _program->addShaderFromSourceFile(QOpenGLShader::Vertex, ":/shader/d.vert");
-    _program->addShaderFromSourceFile(QOpenGLShader::Fragment, ":/shader/d.frag");
+    _program->addShaderFromSourceFile(QOpenGLShader::Vertex, ":/shader/cone.vert");
+    _program->addShaderFromSourceFile(QOpenGLShader::Fragment, ":/shader/cone.frag");
     setShaderProgram(_program);
 
 }
@@ -119,8 +126,11 @@ void ConeModel::init()
         m_vao.create();
     if (!m_vbo.isCreated())
         m_vbo.create();
-    if (!m_program->isLinked())
-        m_program->link();
+    if (!m_program->isLinked()) {
+        auto suc = m_program->link();
+        if (!suc)
+            qDebug() << m_program->log();
+    }
 
     m_vao.bind();
     m_vbo.bind();
@@ -140,7 +150,8 @@ void ConeModel::init()
 
     glVertexAttribPointer(0,     3,  GL_FLOAT,   GL_FALSE,    6 * sizeof(float),     (void*)0);  // 手动传入第几个属性
     glEnableVertexAttribArray(0); // 开始 VAO 管理的第一个属性值
-    glVertexAttribPointer(1,  3,  GL_FLOAT,   GL_FALSE,   6 * sizeof(float),      (void*)(6 * sizeof(float)));  // 手动传入第几个属性
+    // #TODO 3改成6就有颜色了
+    glVertexAttribPointer(1,  3,  GL_FLOAT,   GL_FALSE,   6 * sizeof(float),      (void*)(3 * sizeof(float)));  // 手动传入第几个属性
     glEnableVertexAttribArray(1);
 
     m_program->release();
@@ -154,6 +165,7 @@ void ConeModel::update()
 
 void ConeModel::paint()
 {
+
     m_vao.bind();
     m_program->bind();
 
@@ -168,13 +180,14 @@ void ConeModel::paint()
     m_program->setUniformValue("material.diffuse",   _material.diffuse);
     m_program->setUniformValue("material.specular",  _material.specular);
     m_program->setUniformValue("material.shininess", _material.shininess);
+
     /* # TODO 灯光的位置和颜色 */
     m_program->setUniformValue("light.position", m_light->pos());
     m_program->setUniformValue("light.color", m_light->color().redF(), m_light->color().greenF(), m_light->color().blueF());
     m_program->setUniformValue("viewPos", m_camera->pos());
 
-//    glDrawArrays(GL_TRIANGLES, 0, vertices.size() / 3);
-    glDrawArrays(GL_TRIANGLES, 0, vertices.size());
+    glDrawArrays(GL_TRIANGLES, 0, vertices.size()/6);
+//    glDrawArrays(GL_TRIANGLES, 0, vertices.size());
 
     m_program->release();
     m_vao.release();

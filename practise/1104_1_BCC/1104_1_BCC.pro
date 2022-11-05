@@ -23,9 +23,9 @@ SOURCES += \
     ConeModel.cpp \
     CubeModel.cpp \
     Light.cpp \
+    LightModel.cpp \
     Model.cpp \
     MyOpenGLWidget04.cpp \
-    StableLightModel.cpp \
     main.cpp \
     mainwindow.cpp
 
@@ -35,9 +35,9 @@ HEADERS += \
     ConeModel.h \
     CubeModel.h \
     Light.h \
+    LightModel.h \
     Model.h \
     MyOpenGLWidget04.h \
-    StableLightModel.h \
     foxmath.h \
     mainwindow.h
 

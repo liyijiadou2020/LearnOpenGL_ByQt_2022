@@ -18,7 +18,7 @@ public: // Model interface
     virtual void update() override;
     virtual void paint() override;
 public:
-    std::vector<float> vertices;    // 最终的顶点数据（位置1：3x 顶点数据；位置2：3x 法线数据）
+    std::vector<float> vertices;    // 没有纹理坐标！最终的顶点数据（位置1：3x 顶点数据；位置2：3x 法线数据）
 private:
     float _r=R;       // 半径
     float _height=HEIGHT;  // 高度
