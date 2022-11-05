@@ -34,6 +34,7 @@ private:
     void _generateCenterCross(QPainter&);
 public:
     void move3DShape(QVector3D step); /* 移动图形 */
+    void changeColorOfLight();
 public: 
     bool is_move_ball=false;
     bool is_move_cone=false;

@@ -6,6 +6,7 @@
 #include <QMouseEvent>
 #include <QPainter>
 #include <math.h>
+#include <iostream>
 
 #include "LightModel.h"
 #include "BallModel.h"
@@ -46,6 +47,7 @@ void MyOpenGLWidget04::initializeGL()
 {
     initializeOpenGLFunctions();
     glClearColor(0.2, 0.3, 0.3, 1);
+//    glClearColor(0.4f, 0.5f, 0.5f, 1);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     if (true) {
@@ -160,6 +162,18 @@ void MyOpenGLWidget04::move3DShape(QVector3D step)
     }
 }
 
+void MyOpenGLWidget04::changeColorOfLight()
+{
+    /* 改变颜色 */
+        if (true) {
+            // 使用hsv模型，就可以通过第一个参数来控制所有的颜色了
+            auto _h = m_light.color().hsvHue() + 1;
+            if (_h >= 360)
+                _h -= 360;
+            m_light.setColor(QColor::fromHsv(_h, 255, 255));
+        }
+}
+
 void MyOpenGLWidget04::updateGL()
 {
     update();
@@ -204,6 +218,7 @@ void MyOpenGLWidget04::keyPressEvent(QKeyEvent *event)
     case Qt::Key_Down:  move3DShape(QVector3D( 0.0f,     -moveSpeed, 0.0f));  break;
     case Qt::Key_Left:  move3DShape(QVector3D(-moveSpeed, 0.0f,      0.0f));  break;
     case Qt::Key_Right: move3DShape(QVector3D( moveSpeed, 0.0f,      0.0f));  break;
+    case Qt::Key_0: changeColorOfLight(); break;
     default: break;
     }
     update();
