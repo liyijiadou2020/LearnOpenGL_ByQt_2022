@@ -218,7 +218,8 @@ void MyOpenGLWidget04::keyPressEvent(QKeyEvent *event)
     case Qt::Key_Down:  move3DShape(QVector3D( 0.0f,     -moveSpeed, 0.0f));  break;
     case Qt::Key_Left:  move3DShape(QVector3D(-moveSpeed, 0.0f,      0.0f));  break;
     case Qt::Key_Right: move3DShape(QVector3D( moveSpeed, 0.0f,      0.0f));  break;
-    case Qt::Key_0: changeColorOfLight(); break;
+    case Qt::Key_0:     changeColorOfLight();                                 break;
+    case Qt::Key_1:     m_light.setColor(QColor(255, 255, 255));              break;
     default: break;
     }
     update();

@@ -31,8 +31,8 @@ QWidget:checked {
    <widget class="OpenGLWidget" name="openGLWidget">
     <property name="geometry">
      <rect>
-      <x>110</x>
-      <y>60</y>
+      <x>120</x>
+      <y>20</y>
       <width>551</width>
       <height>351</height>
      </rect>
@@ -48,6 +48,18 @@ QWidget:checked {
      <height>27</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuPress_0_Change_color_of_light">
+    <property name="title">
+     <string>Press 0: Change color of light.</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuPress_1_Reset_white_color">
+    <property name="title">
+     <string>Press 1: Reset white color.</string>
+    </property>
+   </widget>
+   <addaction name="menuPress_0_Change_color_of_light"/>
+   <addaction name="menuPress_1_Reset_white_color"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QToolBar" name="toolBar_2">
