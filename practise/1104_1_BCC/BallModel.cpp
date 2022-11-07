@@ -158,6 +158,10 @@ void BallModel::paint()
         _index += 4;
     }
 
+    // µãÔÆ
+//    glDrawArrays(GL_POINTS, 0, m_vertices.size());
+
+
     m_program->release();
     m_vao.release();
     for (auto texture : m_textures)

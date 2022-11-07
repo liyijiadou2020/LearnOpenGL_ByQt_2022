@@ -14,7 +14,6 @@ Widget::~Widget()
 
 void Widget::initializeGL()
 {
-//    render_.initsize(0.9,0.7,13,30,QImage("texture.png"));
     render_.initsize(0.9, 0.7, 13, 30);
     camera_.setX(3);
     camera_.setY(0);
@@ -40,6 +39,9 @@ void Widget::paintGL()
     mMatrix.rotate(angleX_,1,0,0);
     mMatrix.rotate(angleY_,0,1,0);
     mMatrix.rotate(angleZ_,0,0,1);
+    if (is_change_scale) {
+        mMatrix.scale(0.3);
+    }
     render_.render(f,pMatrix_,vMatrix,mMatrix);
 }
 

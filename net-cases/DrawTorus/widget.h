@@ -13,6 +13,8 @@ class Widget : public QOpenGLWidget
 public:
     Widget(QWidget *parent = 0);
     ~Widget();
+public:
+    bool is_change_scale=false;
 
 protected:
     void initializeGL() override;

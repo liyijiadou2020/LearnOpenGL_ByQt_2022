@@ -16,7 +16,11 @@ public:
     void initsize(float rBig,float rSmall,int nCol,int nRow);
     void render(QOpenGLExtraFunctions *f, QMatrix4x4 &pMatrix, QMatrix4x4 &vMatrix, QMatrix4x4 &mMatrix);
 
-private:
+    float m_scale = 1;
+    void setScale(float val) { m_scale = val; }
+    float scale() { return m_scale; }
+
+private:    
     QOpenGLShaderProgram program_;
     QOpenGLBuffer vbo_;
     QVector<GLfloat> vertPoints_,textPoints_;

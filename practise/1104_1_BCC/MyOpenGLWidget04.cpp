@@ -107,7 +107,7 @@ void MyOpenGLWidget04::paintGL()
 {
     glEnable(GL_DEPTH_TEST); // 开启深度测试
     //    glEnable(GL_CULL_FACE); // 为了节省资源，我们可以开启背面裁剪
-    //    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+        glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
     for (auto dice : m_models)
     {

@@ -1,0 +1,12 @@
+INPUT(
+./debug\light.o
+./debug\main.o
+./debug\mainwindow.o
+./debug\foxopenglwidget.o
+./debug\camera.o
+./debug\sphere.o
+./debug\cone.o
+./debug\qrc_resource.o
+./debug\moc_mainwindow.o
+./debug\moc_foxopenglwidget.o
+);

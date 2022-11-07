@@ -178,8 +178,8 @@ void TorusRender::render(QOpenGLExtraFunctions *f, QMatrix4x4 &pMatrix, QMatrix4
     if(userTexture_){
         f->glActiveTexture(GL_TEXTURE0);
         program_.setUniformValue("uPMatrix",pMatrix);
-        program_.setUniformValue("uVMatrix",vMatrix);
-        program_.setUniformValue("uMMatrix",mMatrix);
+        program_.setUniformValue("uVMatrix",vMatrix);        
+        program_.setUniformValue("uMMatrix",mMatrix);        
         program_.setUniformValue("sTexture",0);
 
         program_.enableAttributeArray(0);
@@ -195,12 +195,11 @@ void TorusRender::render(QOpenGLExtraFunctions *f, QMatrix4x4 &pMatrix, QMatrix4
     }else{
         program_.setUniformValue("uPMatrix",pMatrix);
         program_.setUniformValue("uVMatrix",vMatrix);
-        program_.setUniformValue("uMMatrix",mMatrix);
-
+        program_.setUniformValue("uMMatrix",mMatrix);        
         program_.enableAttributeArray(0);
         program_.enableAttributeArray(1);
         program_.setAttributeBuffer(0,GL_FLOAT,0,3,3*sizeof(GLfloat));
-        program_.setAttributeBuffer(1,GL_FLOAT,vertPoints_.count() * sizeof(GLfloat),4,4*sizeof(GLfloat));
+        program_.setAttributeBuffer(1,GL_FLOAT,vertPoints_.count() * sizeof(GLfloat),4,4*sizeof(GLfloat));       
         f->glDrawArrays(GL_LINE_STRIP,0,vertPoints_.count() / 3);
         program_.disableAttributeArray(0);
         program_.disableAttributeArray(1);

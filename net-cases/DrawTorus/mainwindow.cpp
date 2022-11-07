@@ -14,3 +14,13 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+
+void MainWindow::on_act_1_triggered()
+{
+    ui->openGLWidget->is_change_scale = true;
+}
+
+void MainWindow::on_act_2_triggered()
+{
+    ui->openGLWidget->is_change_scale = false;
+}
