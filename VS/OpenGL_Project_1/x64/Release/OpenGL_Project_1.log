@@ -1,0 +1,11 @@
+﻿  Application1.cpp
+  hello-triangle.cpp
+  lab3-Morph3DShapes.cpp
+D:\source\repos\OpenGL\OpenGL_Project_1\src\LearnOpenGL-1\lab3-Morph3DShapes.cpp(133,77): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+D:\source\repos\OpenGL\OpenGL_Project_1\src\LearnOpenGL-1\lab3-Morph3DShapes.cpp(133,51): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+D:\source\repos\OpenGL\OpenGL_Project_1\src\LearnOpenGL-1\lab3-Morph3DShapes.cpp(133,25): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+D:\source\repos\OpenGL\OpenGL_Project_1\src\LearnOpenGL-1\lab3-Morph3DShapes.cpp(175,9): warning C4101: “j”: 未引用的局部变量
+D:\source\repos\OpenGL\OpenGL_Project_1\src\LearnOpenGL-1\lab3-Morph3DShapes.cpp(378,9): warning C4101: “j”: 未引用的局部变量
+  LearnOpenGL-1-HelloWindow.cpp
+  test-cone.cpp
+LINK : fatal error LNK1104: 无法打开文件“freeglut.lib”

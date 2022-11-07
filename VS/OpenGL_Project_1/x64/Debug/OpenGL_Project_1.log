@@ -1,0 +1,9 @@
+﻿  Application1.cpp
+  1107_20ToBall.cpp
+  lab3-Morph3DShapes.cpp
+  正在生成代码...
+MSVCRTD.lib(exe_main.obj) : error LNK2019: 无法解析的外部符号 main，函数 "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ) 中引用了该符号
+D:\OpenGL\OpenGLtemplate\lib\freeglutd.lib : warning LNK4272: 库计算机类型“x86”与目标计算机类型“x64”冲突
+D:\OpenGL\OpenGLtemplate\lib\glew32.lib : warning LNK4272: 库计算机类型“x86”与目标计算机类型“x64”冲突
+D:\OpenGL\OpenGLtemplate\lib\glfw3.lib : warning LNK4272: 库计算机类型“x86”与目标计算机类型“x64”冲突
+D:\source\repos\OpenGL\OpenGL_Project_1\x64\Debug\OpenGL_Project_1.exe : fatal error LNK1120: 1 个无法解析的外部命令

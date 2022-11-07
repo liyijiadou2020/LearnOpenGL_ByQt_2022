@@ -1,0 +1,5 @@
+﻿  Application1.cpp
+  1107_20ToBall.cpp
+  lab3-Morph3DShapes.cpp
+MSVCRT.lib(exe_main.obj) : error LNK2001: 无法解析的外部符号 _main
+D:\source\repos\OpenGL\OpenGL_Project_1\Release\OpenGL_Project_1.exe : fatal error LNK1120: 1 个无法解析的外部命令
