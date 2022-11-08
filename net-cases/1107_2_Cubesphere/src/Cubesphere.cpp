@@ -36,7 +36,8 @@
 // ctor
 // The radius is circumscribed sphere
 ///////////////////////////////////////////////////////////////////////////////
-Cubesphere::Cubesphere(float radius, int sub, bool smooth) : radius(radius), subdivision(sub), smooth(smooth), interleavedStride(32)
+Cubesphere::Cubesphere(float radius, int sub, bool smooth) 
+    : radius(radius), subdivision(sub), smooth(smooth), interleavedStride(32)
 {
     vertexCountPerRow = (unsigned int)pow(2, sub) + 1;
     vertexCountPerFace = vertexCountPerRow * vertexCountPerRow;
@@ -822,7 +823,7 @@ float Cubesphere::computeScaleForLength(const float v[3], float length)
 
 
 ///////////////////////////////////////////////////////////////////////////////
-// generate vertices for +X face only by intersecting 2 circular planes
+// generate vertices for +X face only by intersecting 2 circular planes 仅通过在经度/纬度角处相交 2 个圆形平面（经度和纬度）来为 +X 面生成顶点
 // (longitudinal and latitudinal) at the longitude/latitude angles
 ///////////////////////////////////////////////////////////////////////////////
 std::vector<float> Cubesphere::getUnitPositiveX(unsigned int pointsPerRow)

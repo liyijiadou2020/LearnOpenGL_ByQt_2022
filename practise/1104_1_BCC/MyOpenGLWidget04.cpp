@@ -60,34 +60,34 @@ void MyOpenGLWidget04::initializeGL()
         m_models << _dice;
     }
 
-    // 画一个圆锥
-    if (true) {
-        auto _c = new ConeModel();
-        _c->setCamera(&m_camera);
-        _c->setLight(&m_light);
-        _c->setPos({ -4, 1, 0 });
-        _c->init();
-        _c->setScale(3.0);
-        m_models << _c;
-    }
+//    // 画一个圆锥
+//    if (true) {
+//        auto _c = new ConeModel();
+//        _c->setCamera(&m_camera);
+//        _c->setLight(&m_light);
+//        _c->setPos({ -4, 1, 0 });
+//        _c->init();
+//        _c->setScale(3.0);
+//        m_models << _c;
+//    }
 
-    // 画一个球
-    if (true) {
-        auto _b = new BallModel();
-        // 摄像机，光源，位置
-        _b->setCamera(&m_camera);
-        _b->setLight(&m_light);
-        _b->setPos({ 0, 3, 0 });
-        _b->init();
-        m_models << _b;
-    }
+//    // 画一个球
+//    if (true) {
+//        auto _b = new BallModel();
+//        // 摄像机，光源，位置
+//        _b->setCamera(&m_camera);
+//        _b->setLight(&m_light);
+//        _b->setPos({ 0, 3, 0 });
+//        _b->init();
+//        m_models << _b;
+//    }
 
     // 灯源
     m_lightModel = new LightModel();
     m_lightModel->setCamera(&m_camera);
     m_lightModel->setLight(&m_light);
     m_lightModel->setPos(m_light.pos());
-    m_lightModel->setScale(0.5);
+    m_lightModel->setScale(0.2);
     m_lightModel->init();
 }
 
