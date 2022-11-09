@@ -590,10 +590,10 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 
 debug/Ball.o: ../1108_1_Morphing/Ball.cpp ../1108_1_Morphing/Ball.h \
 		../1108_1_Morphing/CubeModel_G.h \
-		../1108_1_Morphing/Model.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/QMatrix4x4 \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qmatrix4x4.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qtguiglobal.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/QTime \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qdatetime.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qstring.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qchar.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qglobal.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qconfig-bootstrapped.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qconfig.h \
@@ -615,35 +615,38 @@ debug/Ball.o: ../1108_1_Morphing/Ball.cpp ../1108_1_Morphing/Ball.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qmutex.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qnumeric.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qversiontagging.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qtgui-config.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qvector3d.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qpoint.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qnamespace.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qmetatype.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qbytearray.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qrefcount.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qnamespace.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qarraydata.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qstring.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qchar.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qstringbuilder.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qvarlengtharray.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qcontainerfwd.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qalgorithms.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qobjectdefs.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qobjectdefs_impl.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qvector4d.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qquaternion.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qgenericmatrix.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qdebug.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qshareddata.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qhash.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qiterator.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qlist.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qalgorithms.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qhashfunctions.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qpair.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qbytearraylist.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qstringlist.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qregexp.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qstringmatcher.h \
+		../1108_1_Morphing/Model.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/QMatrix4x4 \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qmatrix4x4.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qtguiglobal.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qtgui-config.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qvector3d.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qpoint.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qmetatype.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qvarlengtharray.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qcontainerfwd.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qobjectdefs.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qobjectdefs_impl.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qvector4d.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qquaternion.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qgenericmatrix.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qdebug.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qmap.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qtextstream.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qiodevice.h \
@@ -653,7 +656,6 @@ debug/Ball.o: ../1108_1_Morphing/Ball.cpp ../1108_1_Morphing/Ball.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qobject_impl.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qlocale.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qvariant.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qshareddata.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qvector.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qset.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qcontiguouscache.h \
@@ -910,6 +912,8 @@ debug/Cone.o: ../1108_1_Morphing/Cone.cpp ../1108_1_Morphing/Cone.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qmargins.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qsize.h \
 		../1108_1_Morphing/CubeModel_G.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/QTime \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qdatetime.h \
 		../1108_1_Morphing/Model.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/QOpenGLExtraFunctions \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qopenglextrafunctions.h \
@@ -960,10 +964,10 @@ debug/Cone.o: ../1108_1_Morphing/Cone.cpp ../1108_1_Morphing/Cone.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\Cone.o ..\1108_1_Morphing\Cone.cpp
 
 debug/CubeModel_G.o: ../1108_1_Morphing/CubeModel_G.cpp ../1108_1_Morphing/CubeModel_G.h \
-		../1108_1_Morphing/Model.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/QMatrix4x4 \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qmatrix4x4.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qtguiglobal.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/QTime \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qdatetime.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qstring.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qchar.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qglobal.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qconfig-bootstrapped.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qconfig.h \
@@ -985,35 +989,38 @@ debug/CubeModel_G.o: ../1108_1_Morphing/CubeModel_G.cpp ../1108_1_Morphing/CubeM
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qmutex.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qnumeric.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qversiontagging.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qtgui-config.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qvector3d.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qpoint.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qnamespace.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qmetatype.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qbytearray.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qrefcount.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qnamespace.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qarraydata.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qstring.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qchar.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qstringbuilder.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qvarlengtharray.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qcontainerfwd.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qalgorithms.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qobjectdefs.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qobjectdefs_impl.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qvector4d.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qquaternion.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qgenericmatrix.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qdebug.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qshareddata.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qhash.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qiterator.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qlist.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qalgorithms.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qhashfunctions.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qpair.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qbytearraylist.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qstringlist.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qregexp.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qstringmatcher.h \
+		../1108_1_Morphing/Model.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/QMatrix4x4 \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qmatrix4x4.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qtguiglobal.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qtgui-config.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qvector3d.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qpoint.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qmetatype.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qvarlengtharray.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qcontainerfwd.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qobjectdefs.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qobjectdefs_impl.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qvector4d.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qquaternion.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qgenericmatrix.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qdebug.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qmap.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qtextstream.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qiodevice.h \
@@ -1023,7 +1030,6 @@ debug/CubeModel_G.o: ../1108_1_Morphing/CubeModel_G.cpp ../1108_1_Morphing/CubeM
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qobject_impl.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qlocale.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qvariant.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qshareddata.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qvector.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qset.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qcontiguouscache.h \
@@ -1141,10 +1147,10 @@ debug/Light.o: ../1108_1_Morphing/Light.cpp ../1108_1_Morphing/Light.h \
 
 debug/LightModel.o: ../1108_1_Morphing/LightModel.cpp ../1108_1_Morphing/LightModel.h \
 		../1108_1_Morphing/CubeModel_G.h \
-		../1108_1_Morphing/Model.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/QMatrix4x4 \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qmatrix4x4.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qtguiglobal.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/QTime \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qdatetime.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qstring.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qchar.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qglobal.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qconfig-bootstrapped.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qconfig.h \
@@ -1166,35 +1172,38 @@ debug/LightModel.o: ../1108_1_Morphing/LightModel.cpp ../1108_1_Morphing/LightMo
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qmutex.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qnumeric.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qversiontagging.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qtgui-config.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qvector3d.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qpoint.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qnamespace.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qmetatype.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qbytearray.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qrefcount.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qnamespace.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qarraydata.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qstring.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qchar.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qstringbuilder.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qvarlengtharray.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qcontainerfwd.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qalgorithms.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qobjectdefs.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qobjectdefs_impl.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qvector4d.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qquaternion.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qgenericmatrix.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qdebug.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qshareddata.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qhash.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qiterator.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qlist.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qalgorithms.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qhashfunctions.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qpair.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qbytearraylist.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qstringlist.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qregexp.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qstringmatcher.h \
+		../1108_1_Morphing/Model.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/QMatrix4x4 \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qmatrix4x4.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qtguiglobal.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qtgui-config.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qvector3d.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qpoint.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qmetatype.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qvarlengtharray.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qcontainerfwd.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qobjectdefs.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qobjectdefs_impl.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qvector4d.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qquaternion.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qgenericmatrix.h \
+		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qdebug.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qmap.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qtextstream.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qiodevice.h \
@@ -1204,7 +1213,6 @@ debug/LightModel.o: ../1108_1_Morphing/LightModel.cpp ../1108_1_Morphing/LightMo
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qobject_impl.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qlocale.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qvariant.h \
-		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qshareddata.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qvector.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qset.h \
 		E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qcontiguouscache.h \

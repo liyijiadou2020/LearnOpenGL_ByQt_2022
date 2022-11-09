@@ -4,9 +4,9 @@ in vec2 vTexture;
 /* 法向量 */
 in vec3 vNormal;
 
-out vec3 FragPos;
-out vec3 Normal;
-out vec2 TexCoords;
+out vec3 gFragPos;
+out vec3 gNormal;
+out vec2 gTexCoords;
 
 uniform mat4 projection;
 uniform mat4 view;
@@ -15,10 +15,10 @@ uniform mat4 model;
 void main()
 {
 //    FragPos就是指当前的顶点坐标，只进行了model的变化，不进行视图和投影变化
-        FragPos = vec3(model * vec4(vPos, 1.0));
+        gFragPos = vec3(model * vec4(vPos, 1.0));
 //        法向量
-        Normal = mat3(transpose(inverse(model))) * vNormal;
-        TexCoords = vTexture;
+        gNormal = mat3(transpose(inverse(model))) * vNormal;
+        gTexCoords = vTexture;
 
         gl_Position = projection * view * model * vec4(vPos, 1.0);
 }

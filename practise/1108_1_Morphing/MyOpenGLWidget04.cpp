@@ -50,15 +50,14 @@ void MyOpenGLWidget04::initializeGL()
 //    glClearColor(0.4f, 0.5f, 0.5f, 1);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-    if (true) {
-        auto _dice = new CubeModel_G();
-        // 摄像机，光源，位置
-        _dice->setCamera(&m_camera);
-        _dice->setLight(&m_light);
-        _dice->setPos({ 0, 0, 0 });
-        _dice->init();
-        m_models << _dice;
-    }
+    // 画一个立方体
+    auto _dice = new CubeModel_G();
+    // 摄像机，光源，位置
+    _dice->setCamera(&m_camera);
+    _dice->setLight(&m_light);
+    _dice->setPos({ 0, 0, 0 });
+    _dice->init();
+    m_models << _dice;
 
 //    // 画一个圆锥
 //    if (true) {
@@ -107,11 +106,12 @@ void MyOpenGLWidget04::paintGL()
 {
     glEnable(GL_DEPTH_TEST); // 开启深度测试
     //    glEnable(GL_CULL_FACE); // 为了节省资源，我们可以开启背面裁剪
-        glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
-    for (auto dice : m_models)
+    for (auto m : m_models)
     {
-        dice->paint();
+        qDebug() << "  (GLfloat)  sin(::gl_time / 10.0f) = " <<   (GLfloat)  sin(::gl_time / 10.0f);
+        m->setTime(  (GLfloat)  sin(++gl_time / 10.0f));
+        m->paint();
     }
 
     // 让灯光绕着轴旋转
@@ -176,34 +176,29 @@ void MyOpenGLWidget04::changeColorOfLight()
 
 void MyOpenGLWidget04::updateGL()
 {
+    gl_time += 1;
     update();
 }
 
 void MyOpenGLWidget04::timerEvent(QTimerEvent *event)
 {
     m_camera.update();
-    float _speed = 0.1;
-    for (auto dice : m_models)
-    {
-        float _y = dice->rotate().y() + _speed; // 绕y轴旋转
-        if (_y >= 360)
-            _y -= 360;
-        dice->setRotate({ 0, _y, 0 });
-        _speed += 1.0; // 每个模型的转动速度是不同的
-    }
+
+    // 旋转
+//    float _speed = 0.1;
+//    for (auto dice : m_models)
+//    {
+//        float _y = dice->rotate().y() + _speed; // 绕y轴旋转
+//        if (_y >= 360)
+//            _y -= 360;
+//        dice->setRotate({ 0, _y, 0 });
+//        _speed += 1.0; // 每个模型的转动速度是不同的
+//    }
+
 
     m_lightModel->setPos(m_light.pos());
 
-    /* 改变颜色 */
-    //    if (true) {
-    //        // 使用hsv模型，就可以通过第一个参数来控制所有的颜色了
-    //        auto _h = m_light.color().hsvHue() + 1;
-    //        if (_h >= 360)
-    //            _h -= 360;
-    //        m_light.setColor(QColor::fromHsv(_h, 255, 255));
-    //    }
 
-    //    repaint();
     update();
 }
 
@@ -225,7 +220,23 @@ void MyOpenGLWidget04::keyPressEvent(QKeyEvent *event)
     update();
 }
 
+void MyOpenGLWidget04::setWirefame(bool wirefame)
+{
+    makeCurrent();
 
+     /* 用线条填充，默认是 GL_FILL */
+    if (true == wirefame)
+    {
+        glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    }
+    else
+    {
+        glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+    }
+
+    doneCurrent();
+    update();  // 【重点】注意使用 update() 进行重绘，也就是这条语句会重新调用 paintGL()
+}
 
 
 
